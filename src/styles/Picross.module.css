@@ -1,0 +1,384 @@
+@keyframes Rotation3D {
+  0% {
+    rotate: y 0deg;
+  }
+  100% {
+    rotate: y 360deg;
+  }
+}
+@keyframes FadeOut {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 1.4;
+    opacity: 0;
+  }
+}
+@keyframes Glow {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes Spin3D {
+  0% {
+    transform: translateX(50px) translateY(50px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateX(50px) translateY(50px) rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes FadePicrossIn {
+  0% {
+    pointer-events: none;
+    filter: brightness(0.1);
+  }
+  72% {
+    filter: brightness(0.1);
+  }
+  99% {
+    pointer-events: none;
+  }
+  100% {
+    pointer-events: all;
+    filter: brightness(1);
+  }
+}
+@keyframes BrightUp {
+  0% {
+    backdrop-filter: blur(10px) brightness(0.1);
+  }
+  72% {
+    backdrop-filter: blur(10px) brightness(0.1);
+  }
+  100% {
+    backdrop-filter: blur(10px) brightness(0.6);
+  }
+}
+@keyframes BrightUp2 {
+  0% {
+    backdrop-filter: blur(100px) brightness(0.1);
+  }
+  72% {
+    backdrop-filter: blur(100px) brightness(0.1);
+  }
+  100% {
+    backdrop-filter: blur(100px) brightness(0.1);
+  }
+}
+.PicrossWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+}
+.PicrossWrapper.revealing .Picross {
+  transition: 10s all;
+}
+.PicrossWrapper.revealing::after {
+  backdrop-filter: blur(10px) brightness(0.1) !important;
+}
+.PicrossWrapper.revealing .Plane {
+  pointer-events: none;
+  transition: 1s all !important;
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.PicrossWrapper.revealing .Plane::after {
+  border-color: transparent !important;
+}
+.PicrossWrapper.revealed::after {
+  backdrop-filter: blur(0px) brightness(1) !important;
+}
+.PicrossWrapper.revealed .Picross {
+  animation: Rotation3D 10s infinite linear;
+}
+.PicrossWrapper.revealed .Plane {
+  pointer-events: none;
+  transition: 1s all !important;
+  background-color: var(--revealing-color) !important;
+  color: var(--revealing-color) !important;
+  border: 1px solid #fff;
+  animation: Glow 2s infinite linear;
+}
+.PicrossWrapper.revealed .Plane::after {
+  border-color: transparent !important;
+}
+.PicrossWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px) brightness(0.6);
+  transition: 1s all;
+  animation: BrightUp 3.6s;
+  z-index: 1;
+}
+.PicrossWrapper.BG1 {
+  background-image: url("../assets/images/bg1.jpg");
+}
+.PicrossWrapper.BG1 .levelVictory {
+  --victory-bg-color: rgba(255, 39, 39, 0.6);
+  --victory-button-color: rgba(255, 39, 39, 0.8);
+}
+.PicrossWrapper.BG2 {
+  background-image: url("../assets/images/bg2.jpg");
+  background-position: -100px -400px;
+  background-size: 110%;
+}
+.PicrossWrapper.BG2::after {
+  animation: BrightUp2 3.6s !important;
+  backdrop-filter: blur(calc(100px * (1 - var(--progress)) + 10px)) brightness(calc(var(--progress)));
+}
+.PicrossWrapper.BG2 .levelVictory {
+  --victory-bg-color: rgba(242, 255, 22, 0.6);
+  --victory-button-color: rgba(242, 255, 22, 0.8);
+}
+.PicrossWrapper.BG3 {
+  background-image: url("../assets/images/bg3.jpg");
+}
+.PicrossWrapper.BG3 .levelVictory {
+  --victory-bg-color: rgba(134, 237, 255, 0.6);
+  --victory-button-color: rgba(134, 237, 255, 0.8);
+}
+.PicrossWrapper.BG4 {
+  background-image: url("../assets/images/bg4.jpg");
+}
+.PicrossWrapper.BG4::after {
+  animation: BrightUp2 3.6s !important;
+  backdrop-filter: blur(calc(100px * (1 - var(--progress)) + 10px)) brightness(calc(var(--progress)));
+}
+.PicrossWrapper.BG4 .levelVictory {
+  --victory-bg-color: rgba(134, 237, 255, 0.6);
+  --victory-button-color: rgba(134, 237, 255, 0.8);
+}
+
+.Picross {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  perspective: 1000000000px;
+  transform-style: preserve-3d;
+  overflow: visible;
+  pointer-events: none;
+}
+.Picross .Block {
+  position: absolute;
+  translate: calc(var(--blocks-width) / 2) calc(var(--blocks-width) / 2);
+  left: calc(50% - var(--blocks-width) / 2);
+  top: calc(50% - var(--blocks-width) / 2);
+  transform-style: preserve-3d;
+  pointer-events: all;
+}
+.Picross .Block.colored .Plane {
+  background-color: var(--level-theme-color);
+  color: #fff;
+}
+.Picross .Block.colored .Plane::after {
+  border-color: #fff;
+}
+.Picross .Block.selectedForAction .Plane {
+  filter: brightness(1.2);
+}
+
+.Plane {
+  animation: FadePicrossIn 3.6s ease;
+  color: #000;
+  width: var(--blocks-width);
+  height: var(--blocks-width);
+  background: gray;
+  border: 1px solid #000;
+  background-size: contain;
+  position: absolute;
+  left: calc(0px - var(--blocks-width) / 2);
+  top: calc(0px - var(--blocks-width) / 2);
+  transition: 0.25s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--blocks-width) - 10px);
+  cursor: pointer;
+  user-select: none;
+}
+.Plane.destroyed {
+  pointer-events: none;
+}
+.Plane.triedDeleting {
+  background-color: red;
+  color: red;
+}
+.Plane:hover {
+  filter: brightness(1.4) !important;
+}
+.Plane.roundNumber::after {
+  border-radius: 50%;
+}
+.Plane.roundNumber::after, .Plane.squareNumber::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 90%;
+  height: 90%;
+  border: max(var(--blocks-width) * 0.05, 2px) solid #000;
+  box-sizing: border-box;
+}
+
+.front {
+  transform: translateZ(calc(var(--blocks-width) / 2));
+}
+.front.destroyed {
+  transform: translateZ(0) scale(0);
+}
+.front.triedDeleting {
+  transform: translateZ(calc(var(--blocks-width) / 4)) scale(0.5);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(calc(var(--blocks-width) / 2));
+}
+.back.destroyed {
+  transform: rotateY(180deg) translateZ(0) scale(0);
+}
+.back.triedDeleting {
+  transform: rotateY(180deg) translateZ(calc(var(--blocks-width) / 4)) scale(0.5);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(calc(var(--blocks-width) / 2));
+}
+.right.destroyed {
+  transform: rotateY(90deg) translateZ(0) scale(0);
+}
+.right.triedDeleting {
+  transform: rotateY(90deg) translateZ(calc(var(--blocks-width) / 4)) scale(0.5);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(calc(var(--blocks-width) / 2));
+}
+.left.destroyed {
+  transform: rotateY(-90deg) translateZ(0) scale(0);
+}
+.left.triedDeleting {
+  transform: rotateY(-90deg) translateZ(calc(var(--blocks-width) / 4)) scale(0.5);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(calc(var(--blocks-width) / 2));
+}
+.top.destroyed {
+  transform: rotateX(90deg) translateZ(0) scale(0);
+}
+.top.triedDeleting {
+  transform: rotateX(90deg) translateZ(calc(var(--blocks-width) / 4)) scale(0.5);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--blocks-width) / 2));
+}
+.bottom.destroyed {
+  transform: rotateX(-90deg) translateZ(0) scale(0);
+}
+.bottom.triedDeleting {
+  transform: rotateX(-90deg) translateZ(calc(var(--blocks-width) / 4)) scale(0.5);
+}
+
+.levelIntro {
+  font-family: Lovely, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: FadeOut 1s 2.6s forwards;
+  pointer-events: none;
+}
+.levelIntro .levelNumber {
+  font-size: 40px;
+}
+.levelIntro .levelName {
+  font-size: 60px;
+}
+
+.levelVictory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  translate: -50% 0;
+  z-index: 30;
+  font-family: Lovely, sans-serif;
+  width: 100%;
+  opacity: 1;
+  color: #fff;
+  text-shadow: 0 0 15px #000;
+  padding: 40px 0 45px 0;
+  transition: 1s all;
+  background: linear-gradient(180deg, var(--victory-bg-color) 90%, transparent 100%);
+}
+.levelVictory .puzzleSolved {
+  font-size: 40px;
+}
+.levelVictory .title {
+  font-size: 70px;
+}
+.levelVictory .puzzleSolved,
+.levelVictory .title {
+  transition: 2s all;
+}
+.levelVictory .nextPuzzle {
+  position: fixed;
+  bottom: -700px;
+  font-size: 40px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 30px 0;
+  cursor: pointer;
+  transition: 0.5s all;
+  background: linear-gradient(0deg, transparent 0%, var(--victory-button-color) 20%, var(--victory-button-color) 80%, transparent 100%);
+}
+.levelVictory .nextPuzzle:hover {
+  scale: 1.2;
+}
+.levelVictory .nextPuzzle:active {
+  scale: 1;
+}
+.levelVictory.hidden {
+  translate: -50% -500px;
+}
+.levelVictory.hidden .puzzleSolved {
+  translate: -100vw 0;
+}
+.levelVictory.hidden .title {
+  translate: 100vw 0;
+}
+.levelVictory.hidden .nextPuzzle {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=Picross.module.css.map */

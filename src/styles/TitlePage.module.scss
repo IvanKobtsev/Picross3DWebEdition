@@ -1,0 +1,236 @@
+@font-face {
+  font-family: Picross3DFont;
+  src: url("../fonts/Amsterdam-Superstar.ttf");
+}
+
+@font-face {
+  font-family: Lovely;
+  src: url("../fonts/TransformaScript_Trial-Regular.ttf");
+}
+
+@font-face {
+  font-family: Lovely;
+  src: url("../fonts/TransformaScript_Trial-Medium.ttf");
+}
+
+@at-root {
+  @property --gradient-point {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+  }
+}
+
+@keyframes RainbowRoad {
+  0% {
+    --gradient-point: 0%;
+  }
+  100% {
+    --gradient-point: 100%;
+  }
+}
+
+@keyframes PicrossTitleSlideIn {
+  0% {
+    translate: 1000px 60px;
+  }
+  100% {
+    translate: 0 60px;
+  }
+}
+
+@keyframes PicrossTitleSlideUp {
+  0% {
+    translate: 0 60px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+@keyframes ColoredTitleFadeIn {
+  0% {
+    translate: 0 -60px;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@keyframes BGFadeIn {
+  0% {
+    filter: brightness(0) blur(10px);
+  }
+  100% {
+    filter: brightness(1) blur(0px);
+  }
+}
+
+@keyframes TitleBGFadeIn {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 300px;
+  }
+}
+
+@keyframes PlayButtonFadeIn {
+  0% {
+    opacity: 0;
+    translate: -50% 0;
+  }
+  100% {
+    opacity: 1;
+    translate: -50% -50%;
+  }
+}
+
+.TitleBG {
+  position: absolute;
+  left: 50%;
+  top: 242px;
+  translate: -50% -50%;
+  width: 100vw;
+  height: 0;
+  background: linear-gradient(
+    0deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.6) 80%,
+    transparent 100%
+  );
+  animation: TitleBGFadeIn 1s 1s ease forwards;
+}
+
+.TitlePage {
+  width: 100vw;
+  height: 100vh;
+  //background: url("../assets/images/Tex_Event_Picture_2.png");
+  background: url("../assets/images/title_wallpaper.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding-top: 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: BGFadeIn 2s;
+}
+
+.Title {
+  left: 50%;
+  position: absolute;
+  font-size: 64px;
+  font-family: Picross3DFont, sans-serif;
+  //translate: 100px 50px;
+  translate: -50% 100px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.Picross3DTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 10px #00000050;
+  animation:
+    PicrossTitleSlideIn 1s cubic-bezier(0, 0, 0.1, 1),
+    PicrossTitleSlideUp 1s 1s ease;
+}
+
+.PicrossTitle {
+  margin-right: 30px;
+}
+
+.ColoredTitle {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) -110%,
+    rgba(255, 0, 0, 1) calc(var(--gradient-point) - 100%),
+    rgba(255, 154, 0, 1) calc(var(--gradient-point) - 90%),
+    rgba(208, 222, 33, 1) calc(var(--gradient-point) - 80%),
+    rgba(79, 220, 74, 1) calc(var(--gradient-point) - 70%),
+    rgba(63, 218, 216, 1) calc(var(--gradient-point) - 60%),
+    rgba(47, 201, 226, 1) calc(var(--gradient-point) - 50%),
+    rgba(28, 127, 238, 1) calc(var(--gradient-point) - 40%),
+    rgba(95, 21, 242, 1) calc(var(--gradient-point) - 30%),
+    rgba(186, 12, 248, 1) calc(var(--gradient-point) - 20%),
+    rgba(251, 7, 217, 1) calc(var(--gradient-point) - 10%),
+    rgba(255, 0, 0, 1) calc(var(--gradient-point)),
+    rgba(255, 154, 0, 1) calc(var(--gradient-point) + 10%),
+    rgba(208, 222, 33, 1) calc(var(--gradient-point) + 20%),
+    rgba(79, 220, 74, 1) calc(var(--gradient-point) + 30%),
+    rgba(63, 218, 216, 1) calc(var(--gradient-point) + 40%),
+    rgba(47, 201, 226, 1) calc(var(--gradient-point) + 50%),
+    rgba(28, 127, 238, 1) calc(var(--gradient-point) + 60%),
+    rgba(95, 21, 242, 1) calc(var(--gradient-point) + 70%),
+    rgba(186, 12, 248, 1) calc(var(--gradient-point) + 80%),
+    rgba(251, 7, 217, 1) calc(var(--gradient-point) + 90%),
+    rgba(255, 0, 0, 1) calc(var(--gradient-point) + 100%)
+  );
+  margin: 0 auto;
+  width: 800px;
+  opacity: 0;
+  animation:
+    3s linear RainbowRoad infinite,
+    ColoredTitleFadeIn 1s 1s cubic-bezier(0.25, 0.1, 0.5, 1) forwards;
+  color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //text-shadow: 0px 0px 5px #ffffff99;
+  text-shadow:
+    //0 0 10px #00000050,
+    0 0 10px #ffffffaa;
+
+  font-family: Lovely, sans-serif;
+  font-size: 50px;
+}
+
+.ColoredTitleText {
+  font-size: 84px;
+  font-family: Picross3DFont, sans-serif;
+  color: transparent;
+  height: 100%;
+  position: absolute;
+}
+
+.TitlePageButton {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 100%;
+  font-family: Picross3DFont, sans-serif;
+  color: white;
+  background: linear-gradient(
+    0deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.6) 80%,
+    transparent 100%
+  );
+  padding: 20px 15px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 32px;
+  translate: -50% -50%;
+  transition: 0.2s all;
+  opacity: 0;
+  animation: PlayButtonFadeIn 1s 2s ease forwards;
+
+  &:hover {
+    color: white;
+    text-shadow: 0 0 10px #fff;
+    scale: 1.1;
+  }
+
+  &:active {
+    scale: 1;
+  }
+}

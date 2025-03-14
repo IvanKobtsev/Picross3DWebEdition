@@ -1,0 +1,95 @@
+@keyframes ToolWiggle {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 20deg;
+  }
+  75% {
+    rotate: -35deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes ToolRound {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes PopIn {
+  0% {
+    translate: 0 200px;
+  }
+  72% {
+    translate: 0 200px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+.Tools {
+  position: fixed;
+  bottom: 100px;
+  right: 120px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  scale: 2;
+  animation: PopIn 3.6s ease forwards;
+  transition: 0.5s all;
+}
+.Tools.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.Tools .brushTool,
+.Tools .hammerTool {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  filter: grayscale(1) brightness(0.6);
+  border-radius: 50%;
+  opacity: 0.5;
+  scale: 0.7;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.Tools .brushTool.active,
+.Tools .hammerTool.active {
+  filter: none;
+  opacity: 1;
+  scale: 1;
+  translate: 0 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.Tools .brushTool {
+  background-color: var(--level-theme-color);
+  background-image: url("../assets/images/brush.png");
+  translate: -20px 0;
+  z-index: -1;
+}
+.Tools .brushTool.active {
+  animation: ToolRound 1s ease;
+}
+.Tools .hammerTool {
+  background-color: rgb(37, 88, 255);
+  background-image: url("../assets/images/hammer.png");
+  background-size: 115%;
+  translate: 20px 0;
+  z-index: -1;
+}
+.Tools .hammerTool.active {
+  animation: ToolWiggle 1s ease;
+}
+
+/*# sourceMappingURL=Tools.module.css.map */
