@@ -23,9 +23,6 @@ export default function Picross({
   mouseDown,
 }: PicrossProps) {
   const stylesheet = `
-  .${styles.Block} { 
-    // ${data.transition ? "transition: .2s all;" : ""}
-  }
   :root {
     --blocks-width: ${data.blockWidth}px;
   }

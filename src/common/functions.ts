@@ -27,7 +27,7 @@ export function degreesToQuaternion(rotation: Coordinate): THREE.Quaternion {
     THREE.MathUtils.degToRad(rotation.x),
     THREE.MathUtils.degToRad(rotation.y),
     THREE.MathUtils.degToRad(rotation.z),
-    "XYZ", // Order of rotations
+    "XYZ",
   );
   quaternion.setFromEuler(euler);
   return quaternion;
@@ -50,28 +50,15 @@ export function rotateObject(
 ) {
   const quaternion = degreesToQuaternion(rotation);
 
-  // Normalize mouse movement
   const angleX = deltaX * rotationSpeed;
   const angleY = deltaY * rotationSpeed;
 
-  // Create quaternion rotations for each axis
   const quaternionX = new THREE.Quaternion();
   const quaternionY = new THREE.Quaternion();
   const quaternionZ = new THREE.Quaternion();
 
-  // Rotate around the world's up-axis (Y-axis)
   quaternionY.setFromAxisAngle(new THREE.Vector3(0, 1, 0), angleX);
-
   quaternionX.setFromAxisAngle(new THREE.Vector3(1, 0, 0), -angleY);
-
-  // Rotate around the object's local right-axis
-  // const rightAxis = new THREE.Vector3(1, 0, 0).applyQuaternion(quaternion);
-  // quaternionX.setFromAxisAngle(rightAxis, -angleY);
-  //
-  // const forwardAxis = new THREE.Vector3(0, 0, 1).applyQuaternion(quaternion);
-  // quaternionZ.setFromAxisAngle(forwardAxis, 0);
-
-  // Apply the rotations
   quaternion.multiplyQuaternions(quaternionY, quaternion);
   quaternion.multiplyQuaternions(quaternionX, quaternion);
   quaternion.multiplyQuaternions(quaternionZ, quaternion);
@@ -80,12 +67,6 @@ export function rotateObject(
 }
 
 const audioContext = new AudioContext();
-
-// export function playSound(src: string) {
-//   const audio = new Audio();
-//   audio.src = src;
-//   audio.play();
-// }
 
 export function playSound(src: string, volume: number = 1) {
   fetch(src)
@@ -99,7 +80,7 @@ export function playSound(src: string, volume: number = 1) {
       source.connect(gainNode);
       gainNode.connect(audioContext.destination);
 
-      gainNode.gain.value = volume; // Control volume safely
+      gainNode.gain.value = volume;
       source.start();
     })
     .catch(console.error);

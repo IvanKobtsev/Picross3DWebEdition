@@ -82,13 +82,12 @@ const drawRotatedImage = (
   size: number,
   colorScale: number,
 ) => {
-  ctx.save(); // Save the current state
-
-  ctx.translate(x, y); // Move to the image position
-  ctx.rotate(angle); // Rotate by the given angle
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(angle);
   ctx.filter = `brightness(${colorScale})`;
-  ctx.drawImage(image, -size / 2, -size / 2, size, size); // Draw centered
-  ctx.restore(); // Restore the previous state
+  ctx.drawImage(image, -size / 2, -size / 2, size, size);
+  ctx.restore();
 };
 
 const FlyingRosesAnimation: React.FC = () => {

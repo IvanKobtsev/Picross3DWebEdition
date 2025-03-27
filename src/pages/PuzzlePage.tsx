@@ -1,21 +1,9 @@
 import { BlockData, Coordinate, MouseData, PicrossData } from "../common/types";
-import {
-  KeyboardEvent,
-  MouseEvent,
-  RefObject,
-  useRef,
-  useState,
-  WheelEvent,
-} from "react";
-import {
-  clamp,
-  coordinateDif,
-  playSound,
-  rotateObject,
-} from "../common/functions.ts";
+import { MouseEvent, RefObject, useRef, useState, WheelEvent } from "react";
+import { clamp, playSound, rotateObject } from "../common/functions.ts";
 import Picross from "../components/Picross.tsx";
 import styles from "../styles/Picross.module.scss";
-import { EAxis, ENumberType, ETool } from "../common/enums.ts";
+import { ENumberType, ETool } from "../common/enums.ts";
 import playLevel from "../assets/audio/sounds/PlayLevel.opus";
 import VictoryFanfare from "../assets/audio/sounds/Victory.opus";
 import blockDestroyed from "../assets/audio/sounds/BlockDeleting.opus";
@@ -25,7 +13,6 @@ import brushClear from "../assets/audio/sounds/BrushClear.opus";
 import brushPaint from "../assets/audio/sounds/BrushPaint.opus";
 import { useAudio } from "../hooks/AudioContext.tsx";
 import { ELevel } from "../common/enums.ts";
-import { isNaN } from "mathjs";
 import { Levels } from "../common/levels.ts";
 import Tools from "../components/Tools.tsx";
 import brushSound from "../assets/audio/sounds/Brush.opus";
@@ -191,7 +178,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
 
       setTimeout(() => {
         picross.current.revealed = true;
-        // mouse.current.allowedToDrag = true;
         update();
       }, 1000);
     }, 9500);
@@ -322,13 +308,17 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
 
   const handleMouseDownOnBlock = (
     event: MouseEvent<HTMLDivElement>,
-    _: number,
+    blockId: number,
   ) => {
     if (event.button === 2) {
       return;
     }
 
     mouse.current.isSelectingBlocks = true;
+
+    picross.current.blocks.forEach((block: BlockData) => {
+      if (blockId === block.id) block.selectedForAction = true;
+    });
 
     update();
   };
@@ -406,59 +396,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
     update();
   };
 
-  const setNumber = (axis: EAxis, coordinate: Coordinate, number: number) => {
-    switch (axis) {
-      case EAxis.XAxis:
-        picross.current.blocks.forEach((block) => {
-          if (
-            block.coordinate.y === coordinate.y &&
-            block.coordinate.z === coordinate.z
-          ) {
-            block.numbers = {
-              ...block.numbers,
-              x: {
-                number: number,
-                type: mouse.current.numberType,
-              },
-            };
-          }
-        });
-        break;
-      case EAxis.YAxis:
-        picross.current.blocks.forEach((block) => {
-          if (
-            block.coordinate.x === coordinate.x &&
-            block.coordinate.z === coordinate.z
-          ) {
-            block.numbers = {
-              ...block.numbers,
-              y: {
-                number: number,
-                type: mouse.current.numberType,
-              },
-            };
-          }
-        });
-        break;
-      case EAxis.ZAxis:
-        picross.current.blocks.forEach((block) => {
-          if (
-            block.coordinate.y === coordinate.y &&
-            block.coordinate.x === coordinate.x
-          ) {
-            block.numbers = {
-              ...block.numbers,
-              z: {
-                number: number,
-                type: mouse.current.numberType,
-              },
-            };
-          }
-        });
-        break;
-    }
-  };
-
   const handlePlaneClick = (
     event: MouseEvent<HTMLDivElement>,
     blockId: number,
@@ -490,31 +427,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
           if (block.id === blockId) colorBlock(block);
         });
         break;
-      case ETool.Numbers:
-        let blockInCase: BlockData | null = null;
-
-        for (const block of picross.current.blocks) {
-          if (block.id === blockId) {
-            blockInCase = block;
-            break;
-          }
-        }
-
-        if (blockInCase !== null) {
-          const coordinateDelta = coordinateDif(
-            blockInCase.coordinate,
-            blockCoordinate,
-          );
-
-          if (coordinateDelta.x != 0) {
-            setNumber(EAxis.XAxis, blockCoordinate, selectedNumber.current);
-          } else if (coordinateDelta.y != 0) {
-            setNumber(EAxis.YAxis, blockCoordinate, selectedNumber.current);
-          } else if (coordinateDelta.z != 0) {
-            setNumber(EAxis.ZAxis, blockCoordinate, selectedNumber.current);
-          }
-        }
-        break;
       case ETool.Color:
         picross.current.blocks.forEach((block) => {
           if (block.id === blockId) {
@@ -533,16 +445,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
     update();
   };
 
-  const selectedNumber = useRef(0);
-
-  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    if (!isNaN(Number(event.key))) {
-      selectedNumber.current = Number(event.key);
-    }
-
-    playSound(hammerSound);
-  };
-
   const stylesheet = `:root { --level-theme-color: ${themeColors[level]}; --level-theme-font-color: ${themeFontColors[level]}; ${specials[level] ? `--progress: ${0.1 + (picross.current.progress ? picross.current.progress : 0) * 0.9}` : ""} }`;
 
   return (
@@ -556,7 +458,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
         onContextMenu={handleContextMenu}
         onWheel={handleMouseWheel}
         tabIndex={0}
-        onKeyDown={handleKeyDown}
       >
         <div
           className={`${styles.levelVictory} ${picross.current.revealed ? "" : styles.hidden}`}
@@ -568,7 +469,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
             onClick={() => {
               localStorage.setItem(`level_${level}_cleared`, "true");
               playSound(playLevel);
-              // navigate(`/puzzles/${levelLinks[level + 1]}`);
               navigate(`/puzzles`);
             }}
           >
