@@ -1,4 +1,4 @@
-import { PicrossData } from "../../types";
+import { PicrossData } from "./types";
 
 export const Levels: PicrossData[] = [
   {
@@ -10,7 +10,7 @@ export const Levels: PicrossData[] = [
       {
         id: 0,
         coordinate: { x: 0, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { z: { number: 2, type: 0 }, x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -18,7 +18,7 @@ export const Levels: PicrossData[] = [
       {
         id: 1,
         coordinate: { x: 0, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -27,7 +27,7 @@ export const Levels: PicrossData[] = [
       {
         id: 2,
         coordinate: { x: 0, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { z: { number: 2, type: 0 } },
         cannotBeDeleted: true,
@@ -36,7 +36,7 @@ export const Levels: PicrossData[] = [
       {
         id: 3,
         coordinate: { x: 0, y: 0, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { z: { number: 2, type: 0 } },
         cannotBeDeleted: true,
@@ -45,7 +45,7 @@ export const Levels: PicrossData[] = [
       {
         id: 4,
         coordinate: { x: 0, y: 0, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { z: { number: 2, type: 0 }, x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -53,7 +53,7 @@ export const Levels: PicrossData[] = [
       {
         id: 5,
         coordinate: { x: 0, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -61,7 +61,7 @@ export const Levels: PicrossData[] = [
       {
         id: 6,
         coordinate: { x: 0, y: -1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -69,7 +69,7 @@ export const Levels: PicrossData[] = [
       {
         id: 7,
         coordinate: { x: 0, y: -1, z: 3 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -78,7 +78,7 @@ export const Levels: PicrossData[] = [
       {
         id: 8,
         coordinate: { x: 0, y: -2, z: 3 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -87,7 +87,7 @@ export const Levels: PicrossData[] = [
       {
         id: 9,
         coordinate: { x: 0, y: -2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -95,7 +95,7 @@ export const Levels: PicrossData[] = [
       {
         id: 10,
         coordinate: { x: 0, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -104,7 +104,7 @@ export const Levels: PicrossData[] = [
       {
         id: 11,
         coordinate: { x: 0, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -112,7 +112,7 @@ export const Levels: PicrossData[] = [
       {
         id: 12,
         coordinate: { x: 0, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { z: { number: 2, type: 0 }, x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -120,7 +120,7 @@ export const Levels: PicrossData[] = [
       {
         id: 13,
         coordinate: { x: 0, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { z: { number: 2, type: 0 } },
         cannotBeDeleted: true,
@@ -129,7 +129,7 @@ export const Levels: PicrossData[] = [
       {
         id: 14,
         coordinate: { x: 0, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { z: { number: 2, type: 0 } },
         cannotBeDeleted: true,
@@ -138,7 +138,7 @@ export const Levels: PicrossData[] = [
       {
         id: 15,
         coordinate: { x: 0, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 }, z: { number: 2, type: 0 } },
         revealedColor: "red",
@@ -146,7 +146,7 @@ export const Levels: PicrossData[] = [
       {
         id: 16,
         coordinate: { x: 0, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -155,7 +155,7 @@ export const Levels: PicrossData[] = [
       {
         id: 17,
         coordinate: { x: 0, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -163,7 +163,7 @@ export const Levels: PicrossData[] = [
       {
         id: 18,
         coordinate: { x: 0, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -171,7 +171,7 @@ export const Levels: PicrossData[] = [
       {
         id: 19,
         coordinate: { x: 0, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -180,7 +180,7 @@ export const Levels: PicrossData[] = [
       {
         id: 20,
         coordinate: { x: 0, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -189,7 +189,7 @@ export const Levels: PicrossData[] = [
       {
         id: 21,
         coordinate: { x: 0, y: -5, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -197,7 +197,7 @@ export const Levels: PicrossData[] = [
       {
         id: 22,
         coordinate: { x: 0, y: -5, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -205,7 +205,7 @@ export const Levels: PicrossData[] = [
       {
         id: 23,
         coordinate: { x: 0, y: -5, z: 3 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { x: { number: 1, type: 0 } },
         cannotBeDeleted: true,
@@ -214,7 +214,7 @@ export const Levels: PicrossData[] = [
       {
         id: 24,
         coordinate: { x: 0, y: -6, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { z: { number: 2, type: 0 }, x: { number: 0, type: 0 } },
         revealedColor: "red",
@@ -222,7 +222,7 @@ export const Levels: PicrossData[] = [
       {
         id: 25,
         coordinate: { x: 0, y: -6, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { z: { number: 2, type: 0 } },
         cannotBeDeleted: true,
@@ -231,7 +231,7 @@ export const Levels: PicrossData[] = [
       {
         id: 26,
         coordinate: { x: 0, y: -6, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         numbers: { z: { number: 2, type: 0 } },
         cannotBeDeleted: true,
@@ -240,7 +240,7 @@ export const Levels: PicrossData[] = [
       {
         id: 27,
         coordinate: { x: 0, y: -6, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         numbers: { x: { number: 0, type: 0 }, z: { number: 2, type: 0 } },
         revealedColor: "red",
@@ -256,7 +256,7 @@ export const Levels: PicrossData[] = [
       {
         id: 19,
         coordinate: { x: 0, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -269,7 +269,7 @@ export const Levels: PicrossData[] = [
       {
         id: 1,
         coordinate: { x: 0, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -282,7 +282,7 @@ export const Levels: PicrossData[] = [
       {
         id: 36,
         coordinate: { x: -1, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: { y: { number: 3, type: 0 }, z: { number: 3, type: 0 } },
@@ -291,7 +291,7 @@ export const Levels: PicrossData[] = [
       {
         id: 4,
         coordinate: { x: 1, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -304,7 +304,7 @@ export const Levels: PicrossData[] = [
       {
         id: 5,
         coordinate: { x: 0, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -317,7 +317,7 @@ export const Levels: PicrossData[] = [
       {
         id: 6,
         coordinate: { x: 0, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -330,7 +330,7 @@ export const Levels: PicrossData[] = [
       {
         id: 7,
         coordinate: { x: 0, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -343,7 +343,7 @@ export const Levels: PicrossData[] = [
       {
         id: 8,
         coordinate: { x: 1, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -356,7 +356,7 @@ export const Levels: PicrossData[] = [
       {
         id: 9,
         coordinate: { x: -1, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -369,7 +369,7 @@ export const Levels: PicrossData[] = [
       {
         id: 12,
         coordinate: { x: -1, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -382,7 +382,7 @@ export const Levels: PicrossData[] = [
       {
         id: 14,
         coordinate: { x: 1, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -395,7 +395,7 @@ export const Levels: PicrossData[] = [
       {
         id: 17,
         coordinate: { x: 1, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -408,7 +408,7 @@ export const Levels: PicrossData[] = [
       {
         id: 20,
         coordinate: { x: -1, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -421,7 +421,7 @@ export const Levels: PicrossData[] = [
       {
         id: 21,
         coordinate: { x: 0, y: 0, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -434,7 +434,7 @@ export const Levels: PicrossData[] = [
       {
         id: 23,
         coordinate: { x: 0, y: 0, z: -2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -447,7 +447,7 @@ export const Levels: PicrossData[] = [
       {
         id: 24,
         coordinate: { x: 2, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -460,7 +460,7 @@ export const Levels: PicrossData[] = [
       {
         id: 25,
         coordinate: { x: -2, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -473,7 +473,7 @@ export const Levels: PicrossData[] = [
       {
         id: 26,
         coordinate: { x: 0, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -486,7 +486,7 @@ export const Levels: PicrossData[] = [
       {
         id: 27,
         coordinate: { x: 0, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -499,7 +499,7 @@ export const Levels: PicrossData[] = [
       {
         id: 28,
         coordinate: { x: 0, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -512,7 +512,7 @@ export const Levels: PicrossData[] = [
       {
         id: 29,
         coordinate: { x: 1, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -525,7 +525,7 @@ export const Levels: PicrossData[] = [
       {
         id: 30,
         coordinate: { x: 0, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -538,7 +538,7 @@ export const Levels: PicrossData[] = [
       {
         id: 31,
         coordinate: { x: -1, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -551,7 +551,7 @@ export const Levels: PicrossData[] = [
       {
         id: 32,
         coordinate: { x: 0, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -564,7 +564,7 @@ export const Levels: PicrossData[] = [
       {
         id: 33,
         coordinate: { x: 0, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         numbers: {
@@ -577,7 +577,7 @@ export const Levels: PicrossData[] = [
       {
         id: 34,
         coordinate: { x: -2, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -589,7 +589,7 @@ export const Levels: PicrossData[] = [
       {
         id: 35,
         coordinate: { x: -1, y: 0, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -601,7 +601,7 @@ export const Levels: PicrossData[] = [
       {
         id: 37,
         coordinate: { x: -1, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -613,7 +613,7 @@ export const Levels: PicrossData[] = [
       {
         id: 38,
         coordinate: { x: -2, y: 0, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -625,7 +625,7 @@ export const Levels: PicrossData[] = [
       {
         id: 41,
         coordinate: { x: 1, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -637,7 +637,7 @@ export const Levels: PicrossData[] = [
       {
         id: 42,
         coordinate: { x: 1, y: 0, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -649,7 +649,7 @@ export const Levels: PicrossData[] = [
       {
         id: 44,
         coordinate: { x: -1, y: -1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -661,7 +661,7 @@ export const Levels: PicrossData[] = [
       {
         id: 45,
         coordinate: { x: 0, y: -1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -673,7 +673,7 @@ export const Levels: PicrossData[] = [
       {
         id: 46,
         coordinate: { x: 1, y: -1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -685,7 +685,7 @@ export const Levels: PicrossData[] = [
       {
         id: 47,
         coordinate: { x: -2, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -697,7 +697,7 @@ export const Levels: PicrossData[] = [
       {
         id: 48,
         coordinate: { x: -2, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -709,7 +709,7 @@ export const Levels: PicrossData[] = [
       {
         id: 49,
         coordinate: { x: -1, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -721,7 +721,7 @@ export const Levels: PicrossData[] = [
       {
         id: 52,
         coordinate: { x: -1, y: -2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -733,7 +733,7 @@ export const Levels: PicrossData[] = [
       {
         id: 54,
         coordinate: { x: -1, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -745,7 +745,7 @@ export const Levels: PicrossData[] = [
       {
         id: 55,
         coordinate: { x: -2, y: -1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -757,7 +757,7 @@ export const Levels: PicrossData[] = [
       {
         id: 56,
         coordinate: { x: -2, y: -2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -769,7 +769,7 @@ export const Levels: PicrossData[] = [
       {
         id: 57,
         coordinate: { x: -2, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -781,7 +781,7 @@ export const Levels: PicrossData[] = [
       {
         id: 58,
         coordinate: { x: -2, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -793,7 +793,7 @@ export const Levels: PicrossData[] = [
       {
         id: 59,
         coordinate: { x: -2, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -805,7 +805,7 @@ export const Levels: PicrossData[] = [
       {
         id: 60,
         coordinate: { x: -2, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -817,7 +817,7 @@ export const Levels: PicrossData[] = [
       {
         id: 61,
         coordinate: { x: -1, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -829,7 +829,7 @@ export const Levels: PicrossData[] = [
       {
         id: 63,
         coordinate: { x: 0, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -841,7 +841,7 @@ export const Levels: PicrossData[] = [
       {
         id: 64,
         coordinate: { x: 0, y: -2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -853,7 +853,7 @@ export const Levels: PicrossData[] = [
       {
         id: 65,
         coordinate: { x: 1, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -865,7 +865,7 @@ export const Levels: PicrossData[] = [
       {
         id: 66,
         coordinate: { x: 1, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -877,7 +877,7 @@ export const Levels: PicrossData[] = [
       {
         id: 67,
         coordinate: { x: 1, y: -2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -889,7 +889,7 @@ export const Levels: PicrossData[] = [
       {
         id: 68,
         coordinate: { x: -2, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -901,7 +901,7 @@ export const Levels: PicrossData[] = [
       {
         id: 69,
         coordinate: { x: -2, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -913,7 +913,7 @@ export const Levels: PicrossData[] = [
       {
         id: 70,
         coordinate: { x: -2, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -925,7 +925,7 @@ export const Levels: PicrossData[] = [
       {
         id: 71,
         coordinate: { x: -2, y: 1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -937,7 +937,7 @@ export const Levels: PicrossData[] = [
       {
         id: 72,
         coordinate: { x: -1, y: 1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -949,7 +949,7 @@ export const Levels: PicrossData[] = [
       {
         id: 73,
         coordinate: { x: 0, y: 1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -961,7 +961,7 @@ export const Levels: PicrossData[] = [
       {
         id: 74,
         coordinate: { x: 1, y: 1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -973,7 +973,7 @@ export const Levels: PicrossData[] = [
       {
         id: 75,
         coordinate: { x: 1, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -985,7 +985,7 @@ export const Levels: PicrossData[] = [
       {
         id: 76,
         coordinate: { x: -1, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -997,7 +997,7 @@ export const Levels: PicrossData[] = [
       {
         id: 77,
         coordinate: { x: -1, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1009,7 +1009,7 @@ export const Levels: PicrossData[] = [
       {
         id: 78,
         coordinate: { x: -1, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1021,7 +1021,7 @@ export const Levels: PicrossData[] = [
       {
         id: 79,
         coordinate: { x: -2, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1033,7 +1033,7 @@ export const Levels: PicrossData[] = [
       {
         id: 80,
         coordinate: { x: -2, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1045,7 +1045,7 @@ export const Levels: PicrossData[] = [
       {
         id: 81,
         coordinate: { x: -1, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1057,7 +1057,7 @@ export const Levels: PicrossData[] = [
       {
         id: 82,
         coordinate: { x: 0, y: 1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1069,7 +1069,7 @@ export const Levels: PicrossData[] = [
       {
         id: 83,
         coordinate: { x: -1, y: 0, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1081,7 +1081,7 @@ export const Levels: PicrossData[] = [
       {
         id: 84,
         coordinate: { x: -2, y: 0, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1093,7 +1093,7 @@ export const Levels: PicrossData[] = [
       {
         id: 85,
         coordinate: { x: -2, y: 1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1105,7 +1105,7 @@ export const Levels: PicrossData[] = [
       {
         id: 86,
         coordinate: { x: -1, y: 1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1117,7 +1117,7 @@ export const Levels: PicrossData[] = [
       {
         id: 87,
         coordinate: { x: -2, y: 2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1129,7 +1129,7 @@ export const Levels: PicrossData[] = [
       {
         id: 88,
         coordinate: { x: -1, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1141,7 +1141,7 @@ export const Levels: PicrossData[] = [
       {
         id: 89,
         coordinate: { x: 0, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1153,7 +1153,7 @@ export const Levels: PicrossData[] = [
       {
         id: 90,
         coordinate: { x: -1, y: 2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1165,7 +1165,7 @@ export const Levels: PicrossData[] = [
       {
         id: 91,
         coordinate: { x: 0, y: 2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1177,7 +1177,7 @@ export const Levels: PicrossData[] = [
       {
         id: 92,
         coordinate: { x: 0, y: -1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1189,7 +1189,7 @@ export const Levels: PicrossData[] = [
       {
         id: 93,
         coordinate: { x: -1, y: -1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1201,7 +1201,7 @@ export const Levels: PicrossData[] = [
       {
         id: 94,
         coordinate: { x: -2, y: -1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1213,7 +1213,7 @@ export const Levels: PicrossData[] = [
       {
         id: 95,
         coordinate: { x: 1, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1225,7 +1225,7 @@ export const Levels: PicrossData[] = [
       {
         id: 96,
         coordinate: { x: 1, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1237,7 +1237,7 @@ export const Levels: PicrossData[] = [
       {
         id: 97,
         coordinate: { x: 0, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1249,7 +1249,7 @@ export const Levels: PicrossData[] = [
       {
         id: 98,
         coordinate: { x: -1, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1261,7 +1261,7 @@ export const Levels: PicrossData[] = [
       {
         id: 99,
         coordinate: { x: -2, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1273,7 +1273,7 @@ export const Levels: PicrossData[] = [
       {
         id: 100,
         coordinate: { x: 1, y: -2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1285,7 +1285,7 @@ export const Levels: PicrossData[] = [
       {
         id: 101,
         coordinate: { x: 0, y: -2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1297,7 +1297,7 @@ export const Levels: PicrossData[] = [
       {
         id: 102,
         coordinate: { x: -1, y: -2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1309,7 +1309,7 @@ export const Levels: PicrossData[] = [
       {
         id: 103,
         coordinate: { x: -2, y: -2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1321,7 +1321,7 @@ export const Levels: PicrossData[] = [
       {
         id: 104,
         coordinate: { x: -2, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1333,7 +1333,7 @@ export const Levels: PicrossData[] = [
       {
         id: 105,
         coordinate: { x: -2, y: 2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1345,7 +1345,7 @@ export const Levels: PicrossData[] = [
       {
         id: 106,
         coordinate: { x: -1, y: 2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1357,7 +1357,7 @@ export const Levels: PicrossData[] = [
       {
         id: 107,
         coordinate: { x: 1, y: 2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1369,7 +1369,7 @@ export const Levels: PicrossData[] = [
       {
         id: 108,
         coordinate: { x: 0, y: 2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1381,7 +1381,7 @@ export const Levels: PicrossData[] = [
       {
         id: 109,
         coordinate: { x: 0, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1393,7 +1393,7 @@ export const Levels: PicrossData[] = [
       {
         id: 110,
         coordinate: { x: 1, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1405,7 +1405,7 @@ export const Levels: PicrossData[] = [
       {
         id: 111,
         coordinate: { x: 1, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1417,7 +1417,7 @@ export const Levels: PicrossData[] = [
       {
         id: 112,
         coordinate: { x: 1, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1429,7 +1429,7 @@ export const Levels: PicrossData[] = [
       {
         id: 113,
         coordinate: { x: 1, y: 2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1441,7 +1441,7 @@ export const Levels: PicrossData[] = [
       {
         id: 114,
         coordinate: { x: 1, y: 1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1453,7 +1453,7 @@ export const Levels: PicrossData[] = [
       {
         id: 115,
         coordinate: { x: 1, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1465,7 +1465,7 @@ export const Levels: PicrossData[] = [
       {
         id: 116,
         coordinate: { x: 1, y: -1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1477,7 +1477,7 @@ export const Levels: PicrossData[] = [
       {
         id: 117,
         coordinate: { x: 1, y: 0, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1489,7 +1489,7 @@ export const Levels: PicrossData[] = [
       {
         id: 118,
         coordinate: { x: 2, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1501,7 +1501,7 @@ export const Levels: PicrossData[] = [
       {
         id: 119,
         coordinate: { x: 2, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1513,7 +1513,7 @@ export const Levels: PicrossData[] = [
       {
         id: 120,
         coordinate: { x: 2, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1525,7 +1525,7 @@ export const Levels: PicrossData[] = [
       {
         id: 121,
         coordinate: { x: 2, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1537,7 +1537,7 @@ export const Levels: PicrossData[] = [
       {
         id: 122,
         coordinate: { x: 2, y: -2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1549,7 +1549,7 @@ export const Levels: PicrossData[] = [
       {
         id: 123,
         coordinate: { x: 2, y: -1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1561,7 +1561,7 @@ export const Levels: PicrossData[] = [
       {
         id: 124,
         coordinate: { x: 2, y: 0, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1573,7 +1573,7 @@ export const Levels: PicrossData[] = [
       {
         id: 125,
         coordinate: { x: 2, y: 1, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1585,7 +1585,7 @@ export const Levels: PicrossData[] = [
       {
         id: 126,
         coordinate: { x: 2, y: 2, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1597,7 +1597,7 @@ export const Levels: PicrossData[] = [
       {
         id: 127,
         coordinate: { x: 2, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1609,7 +1609,7 @@ export const Levels: PicrossData[] = [
       {
         id: 128,
         coordinate: { x: 2, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1621,7 +1621,7 @@ export const Levels: PicrossData[] = [
       {
         id: 129,
         coordinate: { x: 2, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1633,7 +1633,7 @@ export const Levels: PicrossData[] = [
       {
         id: 130,
         coordinate: { x: 2, y: -2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1645,7 +1645,7 @@ export const Levels: PicrossData[] = [
       {
         id: 131,
         coordinate: { x: 2, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1657,7 +1657,7 @@ export const Levels: PicrossData[] = [
       {
         id: 132,
         coordinate: { x: 2, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1669,7 +1669,7 @@ export const Levels: PicrossData[] = [
       {
         id: 133,
         coordinate: { x: 2, y: -1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1681,7 +1681,7 @@ export const Levels: PicrossData[] = [
       {
         id: 134,
         coordinate: { x: 2, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1693,7 +1693,7 @@ export const Levels: PicrossData[] = [
       {
         id: 135,
         coordinate: { x: 2, y: 0, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1705,7 +1705,7 @@ export const Levels: PicrossData[] = [
       {
         id: 136,
         coordinate: { x: 2, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1717,7 +1717,7 @@ export const Levels: PicrossData[] = [
       {
         id: 137,
         coordinate: { x: 2, y: 1, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1729,7 +1729,7 @@ export const Levels: PicrossData[] = [
       {
         id: 138,
         coordinate: { x: 2, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1741,7 +1741,7 @@ export const Levels: PicrossData[] = [
       {
         id: 139,
         coordinate: { x: 2, y: 2, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1753,7 +1753,7 @@ export const Levels: PicrossData[] = [
       {
         id: 140,
         coordinate: { x: 2, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1765,7 +1765,7 @@ export const Levels: PicrossData[] = [
       {
         id: 141,
         coordinate: { x: 2, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#e6ff00",
         numbers: {
@@ -1785,7 +1785,7 @@ export const Levels: PicrossData[] = [
       {
         id: 4,
         coordinate: { x: 0, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1795,7 +1795,7 @@ export const Levels: PicrossData[] = [
       {
         id: 8,
         coordinate: { x: 0, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1805,7 +1805,7 @@ export const Levels: PicrossData[] = [
       {
         id: 10,
         coordinate: { x: 0, y: -3, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1815,7 +1815,7 @@ export const Levels: PicrossData[] = [
       {
         id: 11,
         coordinate: { x: -1, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1825,7 +1825,7 @@ export const Levels: PicrossData[] = [
       {
         id: 17,
         coordinate: { x: 0, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1835,7 +1835,7 @@ export const Levels: PicrossData[] = [
       {
         id: 18,
         coordinate: { x: 0, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1845,7 +1845,7 @@ export const Levels: PicrossData[] = [
       {
         id: 19,
         coordinate: { x: -1, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1855,7 +1855,7 @@ export const Levels: PicrossData[] = [
       {
         id: 20,
         coordinate: { x: 1, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1865,7 +1865,7 @@ export const Levels: PicrossData[] = [
       {
         id: 21,
         coordinate: { x: 1, y: -3, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1875,7 +1875,7 @@ export const Levels: PicrossData[] = [
       {
         id: 22,
         coordinate: { x: -1, y: -3, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1885,7 +1885,7 @@ export const Levels: PicrossData[] = [
       {
         id: 24,
         coordinate: { x: 2, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1895,7 +1895,7 @@ export const Levels: PicrossData[] = [
       {
         id: 25,
         coordinate: { x: -2, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1905,7 +1905,7 @@ export const Levels: PicrossData[] = [
       {
         id: 58,
         coordinate: { x: 0, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1915,7 +1915,7 @@ export const Levels: PicrossData[] = [
       {
         id: 59,
         coordinate: { x: 0, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1925,7 +1925,7 @@ export const Levels: PicrossData[] = [
       {
         id: 61,
         coordinate: { x: -1, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1939,7 +1939,7 @@ export const Levels: PicrossData[] = [
       {
         id: 62,
         coordinate: { x: -1, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1953,7 +1953,7 @@ export const Levels: PicrossData[] = [
       {
         id: 63,
         coordinate: { x: 0, y: -3, z: -2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -1963,7 +1963,7 @@ export const Levels: PicrossData[] = [
       {
         id: 64,
         coordinate: { x: 0, y: -4, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -1977,7 +1977,7 @@ export const Levels: PicrossData[] = [
       {
         id: 65,
         coordinate: { x: 0, y: -4, z: -2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -1991,7 +1991,7 @@ export const Levels: PicrossData[] = [
       {
         id: 67,
         coordinate: { x: -1, y: -4, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2005,7 +2005,7 @@ export const Levels: PicrossData[] = [
       {
         id: 69,
         coordinate: { x: -2, y: -4, z: -2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2019,7 +2019,7 @@ export const Levels: PicrossData[] = [
       {
         id: 70,
         coordinate: { x: 1, y: -4, z: -1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2033,7 +2033,7 @@ export const Levels: PicrossData[] = [
       {
         id: 72,
         coordinate: { x: 2, y: -4, z: -2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2047,7 +2047,7 @@ export const Levels: PicrossData[] = [
       {
         id: 73,
         coordinate: { x: 0, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#e6ff00",
         selectedForAction: false,
@@ -2061,7 +2061,7 @@ export const Levels: PicrossData[] = [
       {
         id: 74,
         coordinate: { x: 1, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2075,7 +2075,7 @@ export const Levels: PicrossData[] = [
       {
         id: 75,
         coordinate: { x: -1, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2089,7 +2089,7 @@ export const Levels: PicrossData[] = [
       {
         id: 76,
         coordinate: { x: -1, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2103,7 +2103,7 @@ export const Levels: PicrossData[] = [
       {
         id: 77,
         coordinate: { x: 0, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2117,7 +2117,7 @@ export const Levels: PicrossData[] = [
       {
         id: 78,
         coordinate: { x: 1, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2131,7 +2131,7 @@ export const Levels: PicrossData[] = [
       {
         id: 80,
         coordinate: { x: -2, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2145,7 +2145,7 @@ export const Levels: PicrossData[] = [
       {
         id: 82,
         coordinate: { x: 2, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2159,7 +2159,7 @@ export const Levels: PicrossData[] = [
       {
         id: 83,
         coordinate: { x: 0, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2173,7 +2173,7 @@ export const Levels: PicrossData[] = [
       {
         id: 85,
         coordinate: { x: -2, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2187,7 +2187,7 @@ export const Levels: PicrossData[] = [
       {
         id: 87,
         coordinate: { x: 2, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2201,7 +2201,7 @@ export const Levels: PicrossData[] = [
       {
         id: 89,
         coordinate: { x: 1, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2211,7 +2211,7 @@ export const Levels: PicrossData[] = [
       {
         id: 90,
         coordinate: { x: -1, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2225,7 +2225,7 @@ export const Levels: PicrossData[] = [
       {
         id: 91,
         coordinate: { x: 1, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2234,7 +2234,7 @@ export const Levels: PicrossData[] = [
       {
         id: 92,
         coordinate: { x: 1, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2243,7 +2243,7 @@ export const Levels: PicrossData[] = [
       {
         id: 93,
         coordinate: { x: -1, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2252,7 +2252,7 @@ export const Levels: PicrossData[] = [
       {
         id: 94,
         coordinate: { x: -1, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2261,7 +2261,7 @@ export const Levels: PicrossData[] = [
       {
         id: 95,
         coordinate: { x: -2, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2270,7 +2270,7 @@ export const Levels: PicrossData[] = [
       {
         id: 96,
         coordinate: { x: -2, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2279,7 +2279,7 @@ export const Levels: PicrossData[] = [
       {
         id: 97,
         coordinate: { x: -3, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2288,7 +2288,7 @@ export const Levels: PicrossData[] = [
       {
         id: 98,
         coordinate: { x: -2, y: -4, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2297,7 +2297,7 @@ export const Levels: PicrossData[] = [
       {
         id: 99,
         coordinate: { x: -3, y: -4, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2306,7 +2306,7 @@ export const Levels: PicrossData[] = [
       {
         id: 100,
         coordinate: { x: -1, y: -4, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2315,7 +2315,7 @@ export const Levels: PicrossData[] = [
       {
         id: 101,
         coordinate: { x: -1, y: -4, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2324,7 +2324,7 @@ export const Levels: PicrossData[] = [
       {
         id: 102,
         coordinate: { x: -2, y: -4, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2333,7 +2333,7 @@ export const Levels: PicrossData[] = [
       {
         id: 103,
         coordinate: { x: -3, y: -4, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2342,7 +2342,7 @@ export const Levels: PicrossData[] = [
       {
         id: 104,
         coordinate: { x: -3, y: -4, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2351,7 +2351,7 @@ export const Levels: PicrossData[] = [
       {
         id: 105,
         coordinate: { x: -3, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2360,7 +2360,7 @@ export const Levels: PicrossData[] = [
       {
         id: 107,
         coordinate: { x: -3, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2369,7 +2369,7 @@ export const Levels: PicrossData[] = [
       {
         id: 108,
         coordinate: { x: 2, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2378,7 +2378,7 @@ export const Levels: PicrossData[] = [
       {
         id: 109,
         coordinate: { x: 2, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2387,7 +2387,7 @@ export const Levels: PicrossData[] = [
       {
         id: 110,
         coordinate: { x: 3, y: -4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2396,7 +2396,7 @@ export const Levels: PicrossData[] = [
       {
         id: 111,
         coordinate: { x: 3, y: -4, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2405,7 +2405,7 @@ export const Levels: PicrossData[] = [
       {
         id: 112,
         coordinate: { x: 3, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2414,7 +2414,7 @@ export const Levels: PicrossData[] = [
       {
         id: 113,
         coordinate: { x: 2, y: -4, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2423,7 +2423,7 @@ export const Levels: PicrossData[] = [
       {
         id: 115,
         coordinate: { x: 3, y: -4, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2432,7 +2432,7 @@ export const Levels: PicrossData[] = [
       {
         id: 116,
         coordinate: { x: 1, y: -4, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2441,7 +2441,7 @@ export const Levels: PicrossData[] = [
       {
         id: 117,
         coordinate: { x: 1, y: -4, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2450,7 +2450,7 @@ export const Levels: PicrossData[] = [
       {
         id: 118,
         coordinate: { x: 2, y: -4, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2459,7 +2459,7 @@ export const Levels: PicrossData[] = [
       {
         id: 119,
         coordinate: { x: 3, y: -4, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         selectedForAction: false,
@@ -2468,7 +2468,7 @@ export const Levels: PicrossData[] = [
       {
         id: 120,
         coordinate: { x: -1, y: -3, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2477,7 +2477,7 @@ export const Levels: PicrossData[] = [
       {
         id: 121,
         coordinate: { x: -2, y: -3, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2486,7 +2486,7 @@ export const Levels: PicrossData[] = [
       {
         id: 122,
         coordinate: { x: -2, y: -3, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2499,7 +2499,7 @@ export const Levels: PicrossData[] = [
       {
         id: 123,
         coordinate: { x: -3, y: -3, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2508,7 +2508,7 @@ export const Levels: PicrossData[] = [
       {
         id: 124,
         coordinate: { x: -3, y: -3, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2517,7 +2517,7 @@ export const Levels: PicrossData[] = [
       {
         id: 125,
         coordinate: { x: -3, y: -3, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2526,7 +2526,7 @@ export const Levels: PicrossData[] = [
       {
         id: 126,
         coordinate: { x: -2, y: -3, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2535,7 +2535,7 @@ export const Levels: PicrossData[] = [
       {
         id: 127,
         coordinate: { x: -1, y: -3, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2544,7 +2544,7 @@ export const Levels: PicrossData[] = [
       {
         id: 129,
         coordinate: { x: 1, y: -3, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2553,7 +2553,7 @@ export const Levels: PicrossData[] = [
       {
         id: 130,
         coordinate: { x: 2, y: -3, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2562,7 +2562,7 @@ export const Levels: PicrossData[] = [
       {
         id: 131,
         coordinate: { x: 3, y: -3, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2571,7 +2571,7 @@ export const Levels: PicrossData[] = [
       {
         id: 132,
         coordinate: { x: 1, y: -3, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2580,7 +2580,7 @@ export const Levels: PicrossData[] = [
       {
         id: 133,
         coordinate: { x: 2, y: -3, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2593,7 +2593,7 @@ export const Levels: PicrossData[] = [
       {
         id: 134,
         coordinate: { x: 3, y: -3, z: -2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2602,7 +2602,7 @@ export const Levels: PicrossData[] = [
       {
         id: 135,
         coordinate: { x: 2, y: -3, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2611,7 +2611,7 @@ export const Levels: PicrossData[] = [
       {
         id: 136,
         coordinate: { x: 3, y: -3, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2620,7 +2620,7 @@ export const Levels: PicrossData[] = [
       {
         id: 138,
         coordinate: { x: 3, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2629,7 +2629,7 @@ export const Levels: PicrossData[] = [
       {
         id: 139,
         coordinate: { x: 2, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2638,7 +2638,7 @@ export const Levels: PicrossData[] = [
       {
         id: 140,
         coordinate: { x: 2, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2651,7 +2651,7 @@ export const Levels: PicrossData[] = [
       {
         id: 141,
         coordinate: { x: 1, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2660,7 +2660,7 @@ export const Levels: PicrossData[] = [
       {
         id: 142,
         coordinate: { x: 3, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2669,7 +2669,7 @@ export const Levels: PicrossData[] = [
       {
         id: 143,
         coordinate: { x: 3, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2678,7 +2678,7 @@ export const Levels: PicrossData[] = [
       {
         id: 144,
         coordinate: { x: 2, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2687,7 +2687,7 @@ export const Levels: PicrossData[] = [
       {
         id: 145,
         coordinate: { x: 1, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2696,7 +2696,7 @@ export const Levels: PicrossData[] = [
       {
         id: 147,
         coordinate: { x: -1, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2705,7 +2705,7 @@ export const Levels: PicrossData[] = [
       {
         id: 148,
         coordinate: { x: -1, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2714,7 +2714,7 @@ export const Levels: PicrossData[] = [
       {
         id: 149,
         coordinate: { x: -2, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2723,7 +2723,7 @@ export const Levels: PicrossData[] = [
       {
         id: 150,
         coordinate: { x: -2, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2736,7 +2736,7 @@ export const Levels: PicrossData[] = [
       {
         id: 151,
         coordinate: { x: -2, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2745,7 +2745,7 @@ export const Levels: PicrossData[] = [
       {
         id: 153,
         coordinate: { x: -3, y: -3, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2754,7 +2754,7 @@ export const Levels: PicrossData[] = [
       {
         id: 154,
         coordinate: { x: -3, y: -3, z: 2 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2763,7 +2763,7 @@ export const Levels: PicrossData[] = [
       {
         id: 155,
         coordinate: { x: -3, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2772,7 +2772,7 @@ export const Levels: PicrossData[] = [
       {
         id: 156,
         coordinate: { x: 1, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2781,7 +2781,7 @@ export const Levels: PicrossData[] = [
       {
         id: 157,
         coordinate: { x: 1, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2790,7 +2790,7 @@ export const Levels: PicrossData[] = [
       {
         id: 158,
         coordinate: { x: 1, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2799,7 +2799,7 @@ export const Levels: PicrossData[] = [
       {
         id: 159,
         coordinate: { x: 1, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2808,7 +2808,7 @@ export const Levels: PicrossData[] = [
       {
         id: 160,
         coordinate: { x: 1, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2817,7 +2817,7 @@ export const Levels: PicrossData[] = [
       {
         id: 161,
         coordinate: { x: 1, y: 3, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2826,7 +2826,7 @@ export const Levels: PicrossData[] = [
       {
         id: 162,
         coordinate: { x: 1, y: 4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2835,7 +2835,7 @@ export const Levels: PicrossData[] = [
       {
         id: 164,
         coordinate: { x: 0, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2844,7 +2844,7 @@ export const Levels: PicrossData[] = [
       {
         id: 165,
         coordinate: { x: 0, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2853,7 +2853,7 @@ export const Levels: PicrossData[] = [
       {
         id: 166,
         coordinate: { x: 0, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2862,7 +2862,7 @@ export const Levels: PicrossData[] = [
       {
         id: 167,
         coordinate: { x: 0, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2871,7 +2871,7 @@ export const Levels: PicrossData[] = [
       {
         id: 168,
         coordinate: { x: 0, y: 3, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2880,7 +2880,7 @@ export const Levels: PicrossData[] = [
       {
         id: 169,
         coordinate: { x: 0, y: 4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2889,7 +2889,7 @@ export const Levels: PicrossData[] = [
       {
         id: 170,
         coordinate: { x: -1, y: 2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2898,7 +2898,7 @@ export const Levels: PicrossData[] = [
       {
         id: 171,
         coordinate: { x: -1, y: 0, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2907,7 +2907,7 @@ export const Levels: PicrossData[] = [
       {
         id: 172,
         coordinate: { x: -1, y: 1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2916,7 +2916,7 @@ export const Levels: PicrossData[] = [
       {
         id: 184,
         coordinate: { x: 1, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 2, type: 0 } },
@@ -2925,7 +2925,7 @@ export const Levels: PicrossData[] = [
       {
         id: 185,
         coordinate: { x: 1, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 2, type: 0 } },
@@ -2934,7 +2934,7 @@ export const Levels: PicrossData[] = [
       {
         id: 187,
         coordinate: { x: 1, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 2, type: 0 } },
@@ -2943,7 +2943,7 @@ export const Levels: PicrossData[] = [
       {
         id: 188,
         coordinate: { x: 1, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 2, type: 0 } },
@@ -2952,7 +2952,7 @@ export const Levels: PicrossData[] = [
       {
         id: 189,
         coordinate: { x: 1, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 2, type: 0 } },
@@ -2961,7 +2961,7 @@ export const Levels: PicrossData[] = [
       {
         id: 190,
         coordinate: { x: 1, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 2, type: 0 } },
@@ -2970,7 +2970,7 @@ export const Levels: PicrossData[] = [
       {
         id: 191,
         coordinate: { x: 1, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2979,7 +2979,7 @@ export const Levels: PicrossData[] = [
       {
         id: 192,
         coordinate: { x: 1, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2988,7 +2988,7 @@ export const Levels: PicrossData[] = [
       {
         id: 193,
         coordinate: { x: 1, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -2997,7 +2997,7 @@ export const Levels: PicrossData[] = [
       {
         id: 194,
         coordinate: { x: 1, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3006,7 +3006,7 @@ export const Levels: PicrossData[] = [
       {
         id: 195,
         coordinate: { x: 1, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3015,7 +3015,7 @@ export const Levels: PicrossData[] = [
       {
         id: 196,
         coordinate: { x: 1, y: 3, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3024,7 +3024,7 @@ export const Levels: PicrossData[] = [
       {
         id: 197,
         coordinate: { x: 1, y: 4, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3033,7 +3033,7 @@ export const Levels: PicrossData[] = [
       {
         id: 205,
         coordinate: { x: -1, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: {
@@ -3046,7 +3046,7 @@ export const Levels: PicrossData[] = [
       {
         id: 206,
         coordinate: { x: -1, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: {
@@ -3059,7 +3059,7 @@ export const Levels: PicrossData[] = [
       {
         id: 207,
         coordinate: { x: -1, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3068,7 +3068,7 @@ export const Levels: PicrossData[] = [
       {
         id: 208,
         coordinate: { x: -1, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3077,7 +3077,7 @@ export const Levels: PicrossData[] = [
       {
         id: 209,
         coordinate: { x: -1, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3086,7 +3086,7 @@ export const Levels: PicrossData[] = [
       {
         id: 210,
         coordinate: { x: -1, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3095,7 +3095,7 @@ export const Levels: PicrossData[] = [
       {
         id: 211,
         coordinate: { x: -1, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3104,7 +3104,7 @@ export const Levels: PicrossData[] = [
       {
         id: 212,
         coordinate: { x: -1, y: 3, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3113,7 +3113,7 @@ export const Levels: PicrossData[] = [
       {
         id: 213,
         coordinate: { x: -1, y: 4, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3126,7 +3126,7 @@ export const Levels: PicrossData[] = [
       {
         id: 214,
         coordinate: { x: -1, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: {
@@ -3139,7 +3139,7 @@ export const Levels: PicrossData[] = [
       {
         id: 215,
         coordinate: { x: -1, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: {
@@ -3152,7 +3152,7 @@ export const Levels: PicrossData[] = [
       {
         id: 216,
         coordinate: { x: -1, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3161,7 +3161,7 @@ export const Levels: PicrossData[] = [
       {
         id: 217,
         coordinate: { x: -1, y: -1, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3170,7 +3170,7 @@ export const Levels: PicrossData[] = [
       {
         id: 218,
         coordinate: { x: -1, y: 3, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3179,7 +3179,7 @@ export const Levels: PicrossData[] = [
       {
         id: 219,
         coordinate: { x: -1, y: 4, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3192,7 +3192,7 @@ export const Levels: PicrossData[] = [
       {
         id: 220,
         coordinate: { x: 0, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 6, type: 1 } },
@@ -3201,7 +3201,7 @@ export const Levels: PicrossData[] = [
       {
         id: 221,
         coordinate: { x: 0, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 6, type: 1 } },
@@ -3210,7 +3210,7 @@ export const Levels: PicrossData[] = [
       {
         id: 222,
         coordinate: { x: 0, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 6, type: 1 } },
@@ -3219,7 +3219,7 @@ export const Levels: PicrossData[] = [
       {
         id: 223,
         coordinate: { x: 1, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 1, type: 0 }, y: { number: 2, type: 0 } },
@@ -3228,7 +3228,7 @@ export const Levels: PicrossData[] = [
       {
         id: 224,
         coordinate: { x: 0, y: -2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3237,7 +3237,7 @@ export const Levels: PicrossData[] = [
       {
         id: 225,
         coordinate: { x: 0, y: -1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3246,7 +3246,7 @@ export const Levels: PicrossData[] = [
       {
         id: 226,
         coordinate: { x: 0, y: 0, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3255,7 +3255,7 @@ export const Levels: PicrossData[] = [
       {
         id: 227,
         coordinate: { x: 0, y: 1, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3264,7 +3264,7 @@ export const Levels: PicrossData[] = [
       {
         id: 228,
         coordinate: { x: 0, y: 2, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3273,7 +3273,7 @@ export const Levels: PicrossData[] = [
       {
         id: 229,
         coordinate: { x: 0, y: 3, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3282,7 +3282,7 @@ export const Levels: PicrossData[] = [
       {
         id: 230,
         coordinate: { x: 0, y: 4, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         selectedForAction: false,
@@ -3291,7 +3291,7 @@ export const Levels: PicrossData[] = [
       {
         id: 231,
         coordinate: { x: 3, y: -4, z: -1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#fff",
         numbers: { x: { number: 3, type: 0 }, z: { number: 1, type: 0 } },
@@ -3299,7 +3299,7 @@ export const Levels: PicrossData[] = [
       {
         id: 232,
         coordinate: { x: 3, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { z: { number: 0, type: 0 } },
@@ -3307,7 +3307,7 @@ export const Levels: PicrossData[] = [
       {
         id: 233,
         coordinate: { x: 3, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         numbers: { x: { number: 7, type: 0 } },
@@ -3316,7 +3316,7 @@ export const Levels: PicrossData[] = [
       {
         id: 234,
         coordinate: { x: 0, y: -3, z: 3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 0, type: 0 } },
@@ -3324,7 +3324,7 @@ export const Levels: PicrossData[] = [
       {
         id: 235,
         coordinate: { x: 0, y: -4, z: 3 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         numbers: { z: { number: 7, type: 0 } },
@@ -3333,7 +3333,7 @@ export const Levels: PicrossData[] = [
       {
         id: 237,
         coordinate: { x: 0, y: -3, z: -3 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { x: { number: 0, type: 0 } },
@@ -3341,7 +3341,7 @@ export const Levels: PicrossData[] = [
       {
         id: 238,
         coordinate: { x: 0, y: -4, z: -3 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         numbers: { z: { number: 7, type: 0 } },
@@ -3350,7 +3350,7 @@ export const Levels: PicrossData[] = [
       {
         id: 239,
         coordinate: { x: -3, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { z: { number: 0, type: 0 } },
@@ -3358,7 +3358,7 @@ export const Levels: PicrossData[] = [
       {
         id: 240,
         coordinate: { x: -3, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#fff",
         numbers: { x: { number: 7, type: 0 } },
@@ -3367,7 +3367,7 @@ export const Levels: PicrossData[] = [
       {
         id: 241,
         coordinate: { x: 0, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#25771c",
         numbers: { y: { number: 6, type: 1 } },
@@ -3376,7 +3376,7 @@ export const Levels: PicrossData[] = [
       {
         id: 242,
         coordinate: { x: 0, y: -2, z: 1 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#25771c",
         numbers: { y: { number: 2, type: 0 } },
@@ -3392,7 +3392,7 @@ export const Levels: PicrossData[] = [
       {
         id: 1,
         coordinate: { x: 0, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3405,7 +3405,7 @@ export const Levels: PicrossData[] = [
       {
         id: 3,
         coordinate: { x: 1, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3414,7 +3414,7 @@ export const Levels: PicrossData[] = [
       {
         id: 5,
         coordinate: { x: -1, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3423,7 +3423,7 @@ export const Levels: PicrossData[] = [
       {
         id: 7,
         coordinate: { x: 1, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3432,7 +3432,7 @@ export const Levels: PicrossData[] = [
       {
         id: 9,
         coordinate: { x: -1, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3441,7 +3441,7 @@ export const Levels: PicrossData[] = [
       {
         id: 11,
         coordinate: { x: -2, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3450,7 +3450,7 @@ export const Levels: PicrossData[] = [
       {
         id: 13,
         coordinate: { x: 2, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3459,7 +3459,7 @@ export const Levels: PicrossData[] = [
       {
         id: 15,
         coordinate: { x: 2, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3468,7 +3468,7 @@ export const Levels: PicrossData[] = [
       {
         id: 17,
         coordinate: { x: -2, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3477,7 +3477,7 @@ export const Levels: PicrossData[] = [
       {
         id: 19,
         coordinate: { x: -3, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3486,7 +3486,7 @@ export const Levels: PicrossData[] = [
       {
         id: 20,
         coordinate: { x: -3, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3495,7 +3495,7 @@ export const Levels: PicrossData[] = [
       {
         id: 21,
         coordinate: { x: -3, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3504,7 +3504,7 @@ export const Levels: PicrossData[] = [
       {
         id: 23,
         coordinate: { x: 3, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3513,7 +3513,7 @@ export const Levels: PicrossData[] = [
       {
         id: 24,
         coordinate: { x: 3, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3522,7 +3522,7 @@ export const Levels: PicrossData[] = [
       {
         id: 25,
         coordinate: { x: 3, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3531,7 +3531,7 @@ export const Levels: PicrossData[] = [
       {
         id: 27,
         coordinate: { x: 1, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3544,7 +3544,7 @@ export const Levels: PicrossData[] = [
       {
         id: 28,
         coordinate: { x: 0, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3557,7 +3557,7 @@ export const Levels: PicrossData[] = [
       {
         id: 29,
         coordinate: { x: -1, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3570,7 +3570,7 @@ export const Levels: PicrossData[] = [
       {
         id: 31,
         coordinate: { x: 1, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3579,7 +3579,7 @@ export const Levels: PicrossData[] = [
       {
         id: 32,
         coordinate: { x: 0, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3588,7 +3588,7 @@ export const Levels: PicrossData[] = [
       {
         id: 33,
         coordinate: { x: -1, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3597,7 +3597,7 @@ export const Levels: PicrossData[] = [
       {
         id: 34,
         coordinate: { x: 0, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3610,7 +3610,7 @@ export const Levels: PicrossData[] = [
       {
         id: 36,
         coordinate: { x: -1, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3619,7 +3619,7 @@ export const Levels: PicrossData[] = [
       {
         id: 37,
         coordinate: { x: 1, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3628,7 +3628,7 @@ export const Levels: PicrossData[] = [
       {
         id: 38,
         coordinate: { x: 4, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3637,7 +3637,7 @@ export const Levels: PicrossData[] = [
       {
         id: 40,
         coordinate: { x: 5, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3646,7 +3646,7 @@ export const Levels: PicrossData[] = [
       {
         id: 41,
         coordinate: { x: 5, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3655,7 +3655,7 @@ export const Levels: PicrossData[] = [
       {
         id: 42,
         coordinate: { x: 0, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3664,7 +3664,7 @@ export const Levels: PicrossData[] = [
       {
         id: 45,
         coordinate: { x: 1, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3673,7 +3673,7 @@ export const Levels: PicrossData[] = [
       {
         id: 46,
         coordinate: { x: -1, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3682,7 +3682,7 @@ export const Levels: PicrossData[] = [
       {
         id: 47,
         coordinate: { x: -4, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3691,7 +3691,7 @@ export const Levels: PicrossData[] = [
       {
         id: 49,
         coordinate: { x: -5, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3700,7 +3700,7 @@ export const Levels: PicrossData[] = [
       {
         id: 50,
         coordinate: { x: -5, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3709,7 +3709,7 @@ export const Levels: PicrossData[] = [
       {
         id: 52,
         coordinate: { x: -3, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3718,7 +3718,7 @@ export const Levels: PicrossData[] = [
       {
         id: 54,
         coordinate: { x: -3, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3727,7 +3727,7 @@ export const Levels: PicrossData[] = [
       {
         id: 56,
         coordinate: { x: 3, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3736,7 +3736,7 @@ export const Levels: PicrossData[] = [
       {
         id: 58,
         coordinate: { x: 3, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3745,7 +3745,7 @@ export const Levels: PicrossData[] = [
       {
         id: 59,
         coordinate: { x: -4, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3754,7 +3754,7 @@ export const Levels: PicrossData[] = [
       {
         id: 60,
         coordinate: { x: -3, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3763,7 +3763,7 @@ export const Levels: PicrossData[] = [
       {
         id: 61,
         coordinate: { x: 3, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3772,7 +3772,7 @@ export const Levels: PicrossData[] = [
       {
         id: 62,
         coordinate: { x: 4, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3781,7 +3781,7 @@ export const Levels: PicrossData[] = [
       {
         id: 63,
         coordinate: { x: -3, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3790,7 +3790,7 @@ export const Levels: PicrossData[] = [
       {
         id: 64,
         coordinate: { x: -4, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3799,7 +3799,7 @@ export const Levels: PicrossData[] = [
       {
         id: 65,
         coordinate: { x: 4, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3808,7 +3808,7 @@ export const Levels: PicrossData[] = [
       {
         id: 66,
         coordinate: { x: 3, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: true,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3817,7 +3817,7 @@ export const Levels: PicrossData[] = [
       {
         id: 67,
         coordinate: { x: -2, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3826,7 +3826,7 @@ export const Levels: PicrossData[] = [
       {
         id: 68,
         coordinate: { x: -2, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3839,7 +3839,7 @@ export const Levels: PicrossData[] = [
       {
         id: 69,
         coordinate: { x: -2, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3848,7 +3848,7 @@ export const Levels: PicrossData[] = [
       {
         id: 70,
         coordinate: { x: -1, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3861,7 +3861,7 @@ export const Levels: PicrossData[] = [
       {
         id: 71,
         coordinate: { x: -1, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3870,7 +3870,7 @@ export const Levels: PicrossData[] = [
       {
         id: 72,
         coordinate: { x: 0, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3879,7 +3879,7 @@ export const Levels: PicrossData[] = [
       {
         id: 73,
         coordinate: { x: 0, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3888,7 +3888,7 @@ export const Levels: PicrossData[] = [
       {
         id: 74,
         coordinate: { x: 1, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3897,7 +3897,7 @@ export const Levels: PicrossData[] = [
       {
         id: 75,
         coordinate: { x: 1, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3906,7 +3906,7 @@ export const Levels: PicrossData[] = [
       {
         id: 76,
         coordinate: { x: 2, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3915,7 +3915,7 @@ export const Levels: PicrossData[] = [
       {
         id: 77,
         coordinate: { x: 2, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3924,7 +3924,7 @@ export const Levels: PicrossData[] = [
       {
         id: 78,
         coordinate: { x: 2, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3933,7 +3933,7 @@ export const Levels: PicrossData[] = [
       {
         id: 79,
         coordinate: { x: -1, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3942,7 +3942,7 @@ export const Levels: PicrossData[] = [
       {
         id: 80,
         coordinate: { x: 0, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3951,7 +3951,7 @@ export const Levels: PicrossData[] = [
       {
         id: 81,
         coordinate: { x: 0, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3960,7 +3960,7 @@ export const Levels: PicrossData[] = [
       {
         id: 82,
         coordinate: { x: 1, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3969,7 +3969,7 @@ export const Levels: PicrossData[] = [
       {
         id: 83,
         coordinate: { x: 1, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3978,7 +3978,7 @@ export const Levels: PicrossData[] = [
       {
         id: 84,
         coordinate: { x: 2, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3987,7 +3987,7 @@ export const Levels: PicrossData[] = [
       {
         id: 85,
         coordinate: { x: 2, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -3996,7 +3996,7 @@ export const Levels: PicrossData[] = [
       {
         id: 86,
         coordinate: { x: 3, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4005,7 +4005,7 @@ export const Levels: PicrossData[] = [
       {
         id: 87,
         coordinate: { x: 4, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4014,7 +4014,7 @@ export const Levels: PicrossData[] = [
       {
         id: 88,
         coordinate: { x: 4, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4023,7 +4023,7 @@ export const Levels: PicrossData[] = [
       {
         id: 89,
         coordinate: { x: 5, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4032,7 +4032,7 @@ export const Levels: PicrossData[] = [
       {
         id: 90,
         coordinate: { x: 5, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4041,7 +4041,7 @@ export const Levels: PicrossData[] = [
       {
         id: 91,
         coordinate: { x: 5, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4050,7 +4050,7 @@ export const Levels: PicrossData[] = [
       {
         id: 92,
         coordinate: { x: 5, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4059,7 +4059,7 @@ export const Levels: PicrossData[] = [
       {
         id: 93,
         coordinate: { x: 4, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4068,7 +4068,7 @@ export const Levels: PicrossData[] = [
       {
         id: 94,
         coordinate: { x: 3, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4077,7 +4077,7 @@ export const Levels: PicrossData[] = [
       {
         id: 95,
         coordinate: { x: 2, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4086,7 +4086,7 @@ export const Levels: PicrossData[] = [
       {
         id: 96,
         coordinate: { x: 4, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4095,7 +4095,7 @@ export const Levels: PicrossData[] = [
       {
         id: 97,
         coordinate: { x: 5, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4108,7 +4108,7 @@ export const Levels: PicrossData[] = [
       {
         id: 98,
         coordinate: { x: 4, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4117,7 +4117,7 @@ export const Levels: PicrossData[] = [
       {
         id: 99,
         coordinate: { x: 3, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4130,7 +4130,7 @@ export const Levels: PicrossData[] = [
       {
         id: 100,
         coordinate: { x: 4, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4139,7 +4139,7 @@ export const Levels: PicrossData[] = [
       {
         id: 101,
         coordinate: { x: 5, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4148,7 +4148,7 @@ export const Levels: PicrossData[] = [
       {
         id: 102,
         coordinate: { x: 5, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4157,7 +4157,7 @@ export const Levels: PicrossData[] = [
       {
         id: 103,
         coordinate: { x: 4, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         selectedForAction: false,
@@ -4166,7 +4166,7 @@ export const Levels: PicrossData[] = [
       {
         id: 104,
         coordinate: { x: 2, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 2, type: 1 } },
@@ -4174,7 +4174,7 @@ export const Levels: PicrossData[] = [
       {
         id: 105,
         coordinate: { x: 3, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 7, type: 2 } },
@@ -4182,7 +4182,7 @@ export const Levels: PicrossData[] = [
       {
         id: 106,
         coordinate: { x: 4, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 3, type: 2 } },
@@ -4190,7 +4190,7 @@ export const Levels: PicrossData[] = [
       {
         id: 107,
         coordinate: { x: 5, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 3, type: 2 } },
@@ -4198,7 +4198,7 @@ export const Levels: PicrossData[] = [
       {
         id: 108,
         coordinate: { x: 5, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 2, type: 1 } },
@@ -4206,7 +4206,7 @@ export const Levels: PicrossData[] = [
       {
         id: 109,
         coordinate: { x: 1, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 3, type: 2 }, y: { number: 6, type: 2 } },
@@ -4214,7 +4214,7 @@ export const Levels: PicrossData[] = [
       {
         id: 110,
         coordinate: { x: 2, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 3, type: 2 } },
@@ -4222,7 +4222,7 @@ export const Levels: PicrossData[] = [
       {
         id: 111,
         coordinate: { x: 2, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: {
@@ -4234,7 +4234,7 @@ export const Levels: PicrossData[] = [
       {
         id: 112,
         coordinate: { x: 0, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 5, type: 2 } },
@@ -4242,7 +4242,7 @@ export const Levels: PicrossData[] = [
       {
         id: 113,
         coordinate: { x: -1, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 3, type: 2 }, y: { number: 6, type: 2 } },
@@ -4250,7 +4250,7 @@ export const Levels: PicrossData[] = [
       {
         id: 114,
         coordinate: { x: -2, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: {
@@ -4262,7 +4262,7 @@ export const Levels: PicrossData[] = [
       {
         id: 115,
         coordinate: { x: -2, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 3, type: 2 } },
@@ -4270,7 +4270,7 @@ export const Levels: PicrossData[] = [
       {
         id: 116,
         coordinate: { x: -2, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 2, type: 1 } },
@@ -4278,7 +4278,7 @@ export const Levels: PicrossData[] = [
       {
         id: 117,
         coordinate: { x: -4, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 3, type: 2 }, y: { number: 3, type: 2 } },
@@ -4286,7 +4286,7 @@ export const Levels: PicrossData[] = [
       {
         id: 118,
         coordinate: { x: -4, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 3, type: 2 } },
@@ -4294,7 +4294,7 @@ export const Levels: PicrossData[] = [
       {
         id: 119,
         coordinate: { x: -3, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 7, type: 2 } },
@@ -4302,7 +4302,7 @@ export const Levels: PicrossData[] = [
       {
         id: 120,
         coordinate: { x: -3, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 7, type: 2 } },
@@ -4310,7 +4310,7 @@ export const Levels: PicrossData[] = [
       {
         id: 121,
         coordinate: { x: -4, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 3, type: 2 } },
@@ -4318,7 +4318,7 @@ export const Levels: PicrossData[] = [
       {
         id: 122,
         coordinate: { x: -4, y: 1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 3, type: 2 }, x: { number: 6, type: 2 } },
@@ -4326,7 +4326,7 @@ export const Levels: PicrossData[] = [
       {
         id: 123,
         coordinate: { x: -5, y: 2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 2, type: 1 } },
@@ -4334,7 +4334,7 @@ export const Levels: PicrossData[] = [
       {
         id: 124,
         coordinate: { x: -5, y: 3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 7, type: 2 } },
@@ -4342,7 +4342,7 @@ export const Levels: PicrossData[] = [
       {
         id: 125,
         coordinate: { x: -5, y: 4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 3, type: 2 } },
@@ -4350,7 +4350,7 @@ export const Levels: PicrossData[] = [
       {
         id: 126,
         coordinate: { x: -5, y: 5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 2, type: 1 } },
@@ -4358,7 +4358,7 @@ export const Levels: PicrossData[] = [
       {
         id: 127,
         coordinate: { x: -5, y: 0, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: {
@@ -4370,7 +4370,7 @@ export const Levels: PicrossData[] = [
       {
         id: 128,
         coordinate: { x: -4, y: -1, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 3, type: 2 }, x: { number: 6, type: 2 } },
@@ -4378,7 +4378,7 @@ export const Levels: PicrossData[] = [
       {
         id: 129,
         coordinate: { x: -3, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: {
@@ -4390,7 +4390,7 @@ export const Levels: PicrossData[] = [
       {
         id: 130,
         coordinate: { x: -4, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 3, type: 2 } },
@@ -4398,7 +4398,7 @@ export const Levels: PicrossData[] = [
       {
         id: 131,
         coordinate: { x: -5, y: -2, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 2, type: 1 } },
@@ -4406,7 +4406,7 @@ export const Levels: PicrossData[] = [
       {
         id: 132,
         coordinate: { x: -4, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 3, type: 2 }, y: { number: 3, type: 2 } },
@@ -4414,7 +4414,7 @@ export const Levels: PicrossData[] = [
       {
         id: 133,
         coordinate: { x: -5, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 7, type: 2 } },
@@ -4422,7 +4422,7 @@ export const Levels: PicrossData[] = [
       {
         id: 134,
         coordinate: { x: -1, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 3, type: 2 }, y: { number: 6, type: 2 } },
@@ -4430,7 +4430,7 @@ export const Levels: PicrossData[] = [
       {
         id: 135,
         coordinate: { x: -5, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 3, type: 2 } },
@@ -4438,7 +4438,7 @@ export const Levels: PicrossData[] = [
       {
         id: 136,
         coordinate: { x: -2, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 2, type: 1 } },
@@ -4446,7 +4446,7 @@ export const Levels: PicrossData[] = [
       {
         id: 137,
         coordinate: { x: -3, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: {
@@ -4458,7 +4458,7 @@ export const Levels: PicrossData[] = [
       {
         id: 138,
         coordinate: { x: -4, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 3, type: 2 } },
@@ -4466,7 +4466,7 @@ export const Levels: PicrossData[] = [
       {
         id: 139,
         coordinate: { x: -5, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 2, type: 1 } },
@@ -4474,7 +4474,7 @@ export const Levels: PicrossData[] = [
       {
         id: 140,
         coordinate: { x: 0, y: -5, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { x: { number: 2, type: 1 }, y: { number: 5, type: 2 } },
@@ -4482,7 +4482,7 @@ export const Levels: PicrossData[] = [
       {
         id: 141,
         coordinate: { x: -2, y: -4, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 3, type: 2 } },
@@ -4490,7 +4490,7 @@ export const Levels: PicrossData[] = [
       {
         id: 142,
         coordinate: { x: -2, y: -3, z: 0 },
-        isDestroyed: false,
+
         isColored: false,
         revealedColor: "#46c7ff",
         numbers: { y: { number: 2, type: 1 }, x: { number: 7, type: 2 } },

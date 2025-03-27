@@ -1,5 +1,5 @@
 import React, { createContext, RefObject, useContext, useRef } from "react";
-import { clamp } from "../static.ts";
+import { clamp } from "../common/functions.ts";
 
 type AudioContextType = {
   playAudio: (src: string, currentTime?: number) => void;
@@ -101,9 +101,6 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
   const setVolume = (volume: number) => {
     audio2Ref.current.volume = volume;
     audioRef.current.volume = maxVolume - volume * maxVolume;
-
-    console.log(audioRef.current.volume);
-    console.log(audio2Ref.current.volume);
   };
 
   return (

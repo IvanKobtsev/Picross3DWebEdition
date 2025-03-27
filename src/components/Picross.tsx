@@ -1,5 +1,5 @@
 import styles from "../styles/Picross.module.scss";
-import { Coordinate, PicrossData } from "../types";
+import { Coordinate, PicrossData } from "../common/types";
 import Block from "./Block.tsx";
 import * as React from "react";
 

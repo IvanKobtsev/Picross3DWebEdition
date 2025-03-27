@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import TitlePage from "./pages/TitlePage.tsx";
 import PuzzlePage from "./pages/PuzzlePage.tsx";
 import { ReactNode } from "react";
-import { ELevel } from "./enums.ts";
+import { ELevel } from "./common/enums.ts";
 import LevelsPage from "./pages/LevelsPage.tsx";
 
 export default function App() {
@@ -58,7 +58,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/puzzles/theThingYouAdore"
+          path="/puzzles/secondSteps"
           element={
             <PageWrapper>
               <PuzzlePage level={ELevel.Chamomile} />

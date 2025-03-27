@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useAudio } from "../hooks/AudioContext.tsx";
 import levelSelect from "../assets/audio/music/LevelSelect.opus";
 import playLevel from "../assets/audio/sounds/PlayLevel.opus";
-import { playSound } from "../static.ts";
-import { ELevel } from "../enums.ts";
+import { playSound } from "../common/functions.ts";
+import { ELevel } from "../common/enums.ts";
 
 export default function LevelsPage() {
   const navigate = useNavigate();
@@ -21,8 +21,6 @@ export default function LevelsPage() {
   for (let i = 0; i < 5; ++i) {
     levelsClear.push(localStorage.getItem(`level_${i.toString()}_cleared`));
   }
-
-  console.log(levelsClear);
 
   playAudio(levelSelect);
 
@@ -49,7 +47,7 @@ export default function LevelsPage() {
         <div
           className={`${styles.level} ${styles.levelIntro} ${styles.animDelay3} ${styles.level3} ${levelsClear[ELevel.Chamomile - 1] ? "" : styles.locked} ${levelsClear[ELevel.Chamomile] ? "" : styles.uncleared}`}
           onClick={() => {
-            selectLevel("/puzzles/theThingYouAdore");
+            selectLevel("/puzzles/secondSteps");
           }}
         >
           03
@@ -65,7 +63,7 @@ export default function LevelsPage() {
         <div
           className={`${styles.level} ${styles.levelIntro} ${styles.animDelay5} ${styles.level5} ${levelsClear[ELevel.Coffee - 1] ? "" : styles.locked} ${levelsClear[ELevel.Coffee] ? "" : styles.uncleared}`}
           onClick={() => {
-            selectLevel("/puzzles/imlost");
+            selectLevel("/puzzles/iAmLost");
           }}
         >
           05

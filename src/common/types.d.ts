@@ -50,7 +50,7 @@ export type PlaneNumbers = {
 export type BlockData = {
   id: number;
   coordinate: Coordinate;
-  isDestroyed: boolean;
+  isDestroyed?: boolean;
   isColored: boolean;
   revealedColor: string;
   numbers?: PlaneNumbers;

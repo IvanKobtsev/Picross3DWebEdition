@@ -1,10 +1,10 @@
 import styles from "../styles/Tools.module.scss";
-import { ETool } from "../enums.ts";
+import { ETool } from "../common/enums.ts";
 import React, { useState } from "react";
-import { MouseData } from "../types";
+import { MouseData } from "../common/types";
 import brushSound from "../assets/audio/sounds/Brush.opus";
 import hammerSound from "../assets/audio/sounds/Hammer.opus";
-import { playSound } from "../static.ts";
+import { playSound } from "../common/functions.ts";
 
 interface ToolsProps {
   selectedToolRef: React.RefObject<MouseData>;

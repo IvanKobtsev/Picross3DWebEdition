@@ -1,4 +1,4 @@
-import { BlockData, Coordinate, MouseData, PicrossData } from "../types";
+import { BlockData, Coordinate, MouseData, PicrossData } from "../common/types";
 import {
   KeyboardEvent,
   MouseEvent,
@@ -7,22 +7,15 @@ import {
   useState,
   WheelEvent,
 } from "react";
-import { clamp, coordinateDif, playSound, rotateObject } from "../static.ts";
+import {
+  clamp,
+  coordinateDif,
+  playSound,
+  rotateObject,
+} from "../common/functions.ts";
 import Picross from "../components/Picross.tsx";
 import styles from "../styles/Picross.module.scss";
-import { EAxis, ENumberType, ETool } from "../enums.ts";
-import BGTrack1 from "../assets/audio/music/DuskFalls.opus";
-import BGTrack2 from "../assets/audio/music/TheSummerSongBackground.opus";
-import BGTrack3 from "../assets/audio/music/DarkWastes.opus";
-import BGTrack4 from "../assets/audio/music/ThreeWhiteHorsesBackground.opus";
-import BGTrack5 from "../assets/audio/music/CoffeeTalk.opus";
-import VictoryTrack1 from "../assets/audio/music/DuskFallsFull.opus";
-import VictoryTrack2 from "../assets/audio/music/TheSummerSongFull.opus";
-import VictoryTrack3 from "../assets/audio/music/DarkWastesFull.opus";
-import VictoryTrack4 from "../assets/audio/music/ThreeWhiteHorsesFull.opus";
-import VictoryTrack5 from "../assets/audio/music/CoffeeTalkFull.opus";
-import CoffeeExtraTrack1 from "../assets/audio/music/CoffeeTalkExtra1.opus";
-import CoffeeExtraTrack2 from "../assets/audio/music/CoffeeTalkExtra2.opus";
+import { EAxis, ENumberType, ETool } from "../common/enums.ts";
 import playLevel from "../assets/audio/sounds/PlayLevel.opus";
 import VictoryFanfare from "../assets/audio/sounds/Victory.opus";
 import blockDestroyed from "../assets/audio/sounds/BlockDeleting.opus";
@@ -31,19 +24,33 @@ import notAllowed from "../assets/audio/sounds/NotAllowed.opus";
 import brushClear from "../assets/audio/sounds/BrushClear.opus";
 import brushPaint from "../assets/audio/sounds/BrushPaint.opus";
 import { useAudio } from "../hooks/AudioContext.tsx";
-import { ELevel } from "../enums";
+import { ELevel } from "../common/enums.ts";
 import { isNaN } from "mathjs";
-import { Levels } from "../assets/levels/Levels.ts";
+import { Levels } from "../common/levels.ts";
 import Tools from "../components/Tools.tsx";
 import brushSound from "../assets/audio/sounds/Brush.opus";
 import hammerSound from "../assets/audio/sounds/Hammer.opus";
 import FlyingRoses from "../components/FlyingRoses.tsx";
 import Applause from "../assets/audio/sounds/Applause.opus";
 import { useNavigate } from "react-router-dom";
+import {
+  BGs,
+  BGSpecialTracks,
+  BGTracks,
+  intros,
+  specials,
+  themeColors,
+  themeFontColors,
+  victoryTitles,
+  victoryTracks,
+  victoryTracksTimes,
+} from "../common/constants.ts";
 
-const equalCoordinates = (coord1: Coordinate, coord2: Coordinate) => {
+const equalCoordinates = (coordinate1: Coordinate, coordinate2: Coordinate) => {
   return (
-    coord1.x === coord2.x && coord1.y === coord2.y && coord1.z === coord2.z
+    coordinate1.x === coordinate2.x &&
+    coordinate1.y === coordinate2.y &&
+    coordinate1.z === coordinate2.z
   );
 };
 
@@ -69,42 +76,6 @@ interface PuzzlePageProps {
 
 export default function PuzzlePage({ level }: PuzzlePageProps) {
   const navigate = useNavigate();
-
-  const themeColors = ["#ff4646", "#ddff46", "#46b8ff", "#b4fffa", "#ff4646"];
-  const themeFontColors = ["#fff", "#fff", "#fff", "#000", "#000"];
-  const specials = [false, true, false, true, false];
-  const BGs = [styles.BG1, styles.BG2, styles.BG3, styles.BG4, styles.BG5];
-  const BGTracks = [BGTrack1, BGTrack2, BGTrack3, BGTrack4, BGTrack5];
-  const BGSpecialTracks = ["", CoffeeExtraTrack1, "", CoffeeExtraTrack2, ""];
-  const victoryTracks = [
-    VictoryTrack1,
-    VictoryTrack2,
-    VictoryTrack3,
-    VictoryTrack4,
-    VictoryTrack5,
-  ];
-  const victoryTracksTimes = [86.5, 41, 62.8, 157.5, 0];
-  const intros = [
-    "First Steps",
-    "Something Special",
-    "The Thing You Adore",
-    "Something Even More Special",
-    "???",
-  ];
-  const victoryTitles = [
-    "Happy (late) March 8th!",
-    "The Sun",
-    "Chamomile",
-    "Snowflake",
-    "Coffee",
-  ];
-  const levelLinks = [
-    "firstSteps",
-    "somethingSpecial",
-    "theThingYouAdore",
-    "somethingEvenMoreSpecial",
-    "???",
-  ];
 
   const { playAudio, setVolume, playDoubleAudio } = useAudio();
 
@@ -133,7 +104,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
   });
 
   const puzzleStarted = useRef(false);
-  const testing = false;
 
   if (!puzzleStarted.current) {
     puzzleStarted.current = true;
@@ -183,23 +153,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
           ++blocksCount;
         }
       }
-    }
-
-    if (testing) {
-      for (let i = 0; i < picross.current.blocks.length; i++) {
-        if (picross.current.blocks[i].cannotBeDeleted) {
-          picross.current.blocks[i].isColored = true;
-          picross.current.blocks[i].cannotBeDeleted = false;
-        }
-      }
-
-      picross.current.blocks.forEach((p) => {
-        if (p.coordinate.y < -3) {
-          p.revealedColor = "#fff";
-        } else {
-          p.revealedColor = "#25771c";
-        }
-      });
     }
 
     picross.current.totalBlocksToDelete = blocksCount;
@@ -336,13 +289,9 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
     } else {
       playSound(brushClear);
     }
-
-    console.log(block);
   };
 
   const handleMouseOver = (_: MouseEvent<HTMLDivElement>, blockId: number) => {
-    if (testing) return;
-
     if (!mouse.current.isHolding) mouse.current.allowedToDrag = false;
 
     if (mouse.current.isSelectingBlocks) {
@@ -351,8 +300,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
       });
       update();
     }
-
-    console.log(mouse.current.isSelectingBlocks);
 
     mouse.current.isOverBlock = true;
     clearTimeout(mouse.current.mouseLeaveTimeout);
@@ -375,18 +322,13 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
 
   const handleMouseDownOnBlock = (
     event: MouseEvent<HTMLDivElement>,
-    blockId: number,
+    _: number,
   ) => {
     if (event.button === 2) {
       return;
     }
 
     mouse.current.isSelectingBlocks = true;
-
-    if (!testing)
-      picross.current.blocks.forEach((block: BlockData) => {
-        if (blockId === block.id) block.selectedForAction = true;
-      });
 
     update();
   };
@@ -396,15 +338,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
       mouse.current.isHolding = true;
       mouse.current.clientX = event.clientX;
       mouse.current.clientY = event.clientY;
-
-      navigator.clipboard
-        .writeText(JSON.stringify(picross.current.blocks))
-        .then(() => {
-          // Получилось!
-        })
-        .catch((err) => {
-          console.log("Something went wrong", err);
-        });
     }
   };
 
@@ -469,6 +402,7 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
       20,
       100,
     );
+
     update();
   };
 
@@ -532,7 +466,7 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
   ) => {
     event.preventDefault();
 
-    if (event.button === 0 && !testing) {
+    if (event.button === 0) {
       return;
     }
 
@@ -604,38 +538,6 @@ export default function PuzzlePage({ level }: PuzzlePageProps) {
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (!isNaN(Number(event.key))) {
       selectedNumber.current = Number(event.key);
-    }
-
-    if (event.key === "h") {
-      mouse.current.chosenTool = ETool.Hammer;
-    }
-
-    if (event.key === "b") {
-      mouse.current.chosenTool = ETool.Block;
-    }
-
-    if (event.key === "n") {
-      mouse.current.chosenTool = ETool.Numbers;
-    }
-
-    if (event.key === "g") {
-      mouse.current.chosenTool = ETool.Brush;
-    }
-
-    if (event.key === "c") {
-      mouse.current.chosenTool = ETool.Color;
-    }
-
-    if (event.key === "s") {
-      mouse.current.numberType = ENumberType.square;
-    }
-
-    if (event.key === "r") {
-      mouse.current.numberType = ENumberType.round;
-    }
-
-    if (event.key === "q") {
-      mouse.current.numberType = ENumberType.normal;
     }
 
     playSound(hammerSound);

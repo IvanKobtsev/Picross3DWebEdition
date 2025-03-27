@@ -1,7 +1,8 @@
 import styles from "../styles/Picross.module.scss";
-import { BlockData, Coordinate } from "../types";
+import { BlockData, Coordinate } from "../common/types";
 import * as React from "react";
-import { coordinateSum } from "../static.ts";
+import { coordinateSum } from "../common/functions.ts";
+import { numberTypesStyles } from "../common/constants.ts";
 
 interface BlockProps {
   blockData: BlockData;
@@ -24,7 +25,10 @@ export default function Block({
   mouseLeave,
   mouseDown,
 }: BlockProps) {
-  let stylesheet = `#Block_${blockData.id} { --revealing-color: ${blockData.revealedColor}; transform: translateX(${blockData.coordinate.x * width}px) translateY(${blockData.coordinate.y * width}px) translateZ(${blockData.coordinate.z * width}px) }`;
+  let stylesheet = `#Block_${blockData.id} { --revealing-color: ${blockData.revealedColor}; 
+  transform: translateX(${blockData.coordinate.x * width}px) 
+  translateY(${blockData.coordinate.y * width}px) 
+  translateZ(${blockData.coordinate.z * width}px) }`;
 
   function planeClicked(
     event: React.MouseEvent<HTMLDivElement>,
@@ -47,12 +51,6 @@ export default function Block({
   if (blockData.triedDeleting) {
     triedDeletingStyle = styles.triedDeleting;
   }
-
-  const numberTypesStyles = [
-    styles.normal,
-    styles.roundNumber,
-    styles.squareNumber,
-  ];
 
   return (
     <div
